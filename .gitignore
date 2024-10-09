@@ -44,3 +44,11 @@ files/helm/fastgpt/fastgpt-0.1.0.tgz
 files/helm/fastgpt/charts/*.tgz
 
 tmp/
+
+# rkwork
+rkwork/compose_quick/mongo
+rkwork/compose_quick/mysql
+rkwork/compose_quick/oneapi
+rkwork/compose_quick/pg
+
+rkwork/compose_quick_cp
