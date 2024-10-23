@@ -1,0 +1,1913 @@
+﻿{
+  "nodes": [
+    {
+      "nodeId": "userGuide",
+      "name": "common:core.module.template.system_config",
+      "intro": "common:core.module.template.system_config_info",
+      "avatar": "core/workflow/template/systemConfig",
+      "flowNodeType": "userGuide",
+      "position": {
+        "x": -1228.5279411029578,
+        "y": -430.19443712581847
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "welcomeText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "string",
+          "label": "core.app.Welcome Text",
+          "value": ""
+        },
+        {
+          "key": "variables",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "core.app.Chat Variable",
+          "value": []
+        },
+        {
+          "key": "questionGuide",
+          "valueType": "boolean",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "core.app.Question Guide",
+          "value": false
+        },
+        {
+          "key": "tts",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": {
+            "type": "web"
+          }
+        },
+        {
+          "key": "whisper",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": {
+            "open": false,
+            "autoSend": false,
+            "autoTTSResponse": false
+          }
+        },
+        {
+          "key": "scheduleTrigger",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": null
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "448745",
+      "name": "common:core.module.template.work_start",
+      "intro": "",
+      "avatar": "core/workflow/template/workflowStart",
+      "flowNodeType": "workflowStart",
+      "position": {
+        "x": -586.361939928224,
+        "y": -325.19443712581847
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "common:core.module.input.label.user question",
+          "required": true,
+          "toolDescription": "用户问题",
+          "debugLabel": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "userChatInput",
+          "key": "userChatInput",
+          "label": "common:core.module.input.label.user question",
+          "type": "static",
+          "valueType": "string",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "gwmYRBhCFCZx",
+      "name": "AI 对话",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": 563.5820504603743,
+        "y": -517.6944371258185
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "model",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "label": "AI 模型",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "gpt-4o"
+        },
+        {
+          "key": "temperature",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 0,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 2000,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": true,
+          "valueType": "boolean",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "value": "system",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "boolean",
+          "value": false,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "max": 3000,
+          "valueType": "string",
+          "label": "提示词",
+          "description": "模型固定的引导词，通过调整该内容，可以引导模型聊天方向。该内容会被固定在上下文的开头。可通过输入 / 插入选择变量\n如果关联了知识库，你还可以通过适当的描述，来引导模型何时去调用知识库搜索。例如：\n你是电影《星际穿越》的助手，当用户询问与《星际穿越》相关的内容时，请搜索知识库并结合搜索结果进行回答。",
+          "placeholder": "core.app.tip.chatNodeSystemPromptTip",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "参考下述文案结构，根据用户输入的主题，生成类似文案，注意结构文案的语言特征，偏口语化，前后通畅\n\n标题：“女人要想把婚姻过好，一定要坚持这3步”\n分析：标题具有强烈的行动号召性，使用了“一定要坚持”这样的词汇来强调紧迫性和重要性。它直接指向目标受众（女性），并承诺提供具体的解决方案（三步）。\n\n引入：“你不用羡慕那些婚姻幸福的女人”\n分析：这句话立即与读者建立共鸣，通过“不用羡慕”来降低读者的防御心理，同时暗示每个人都有可能实现幸福婚姻。\n\n共鸣加强：“她和你一样一粒鸡毛的过日子”\n分析：“一粒鸡毛”是一个形象的比喻，说明即使是看似幸福的人也有自己的烦恼。这句话进一步拉近了与读者的距离。\n\n过渡到解决方案：“只是她坚持对了三步”\n分析：这句话过渡到文章的主要内容，即“三步”，为读者提供了一个清晰的期待，即文章将提供具体的行动指南。\n\n第一步：原则：“坚持好婚姻的四个原则 家里的经济掌握好 夫妻生活不能少 孩子的问题一起处理好 夫妻问题立刻解决掉”\n分析：这里列出了四个具体的原则，每个原则都是婚姻中的关键要素。这种列举方式清晰、具体，易于读者理解和记忆。\n\n第二步：心情：“保持好心情 女人过日子过的是心情 心情是自己给的”\n分析：这一步强调了心态的重要性，并通过“心情是自己给的”来鼓励读者主动调整自己的心态。\n\n案例引入：“就像我之前认识一些朋友 每天把家里打扫的干干净净 但他自己却累的不行”\n分析：通过一个具体的例子，展示了一个女性在婚姻中的牺牲和努力，以及这些努力可能带来的负面效果。\n\n案例结果：“后来她变了 有空就和朋友出去玩 喜欢的衣服也买买 脑功该咋样就咋样 她的心情变好了”\n分析：展示了案例中的女性如何通过改变生活方式来提升自己的心情，从而改善婚姻生活。\n\n第三步：自我关注：“第三步 自私点 多关注自己一点”\n分析：这一步鼓励读者在婚姻中也要关注自己的需求，这是对前两步的补充，强调了自我关怀的重要性。\n\n具体建议：“什么时候该休息呢 哪天想出去玩了 过年要买新衣服了”\n分析：这里提供了一些具体的建议，帮助读者理解如何在日常生活中实践自我关怀。\n\n总结：“所以想把婚姻过好 真的需要点方法 不然你付出的越多 换来的也只能是委屈越多”\n分析：这句话总结了文章的主旨，强调了方法和策略的重要性，而不是单纯的付出"
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "最多携带多少轮对话记录",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "label": "",
+          "debugLabel": "知识库引用",
+          "description": "",
+          "valueType": "datasetQuote",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "stringQuoteText",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "label": "文档引用",
+          "debugLabel": "文档引用",
+          "description": "通常用于接受用户上传的文档内容(这需要文档解析)，也可以用于引用其他字符串数据。",
+          "valueType": "string",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户问题",
+          "required": true,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "value": [
+            "lrwp5tY2aYsJ",
+            "system_text"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "新的上下文",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": true,
+          "label": "AI 回复内容",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static",
+          "valueDesc": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "lrwp5tY2aYsJ",
+      "name": "文本拼接",
+      "intro": "可对固定或传入的文本进行加工后输出，非字符串类型数据最终会转成字符串类型。",
+      "avatar": "core/workflow/template/textConcat",
+      "flowNodeType": "textEditor",
+      "position": {
+        "x": -145.88572821349635,
+        "y": -342.69443712581847
+      },
+      "version": "486",
+      "inputs": [
+        {
+          "key": "system_addInputParam",
+          "renderTypeList": [
+            "addInputParam"
+          ],
+          "valueType": "dynamic",
+          "label": "",
+          "required": false,
+          "description": "可以引用其他节点的输出，作为文本拼接的变量，输入 / 唤起变量列表",
+          "customInputConfig": {
+            "selectValueTypeList": [
+              "string",
+              "number",
+              "boolean",
+              "object",
+              "arrayString",
+              "arrayNumber",
+              "arrayBoolean",
+              "arrayObject",
+              "arrayAny",
+              "any",
+              "chatHistory",
+              "datasetQuote",
+              "dynamic",
+              "selectApp",
+              "selectDataset"
+            ],
+            "showDescription": false,
+            "showDefaultValue": false
+          },
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "system_textareaInput",
+          "renderTypeList": [
+            "textarea"
+          ],
+          "valueType": "string",
+          "required": true,
+          "label": "拼接文本",
+          "placeholder": "workflow:input_variable_list",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "主题为：{{$lrwp5tY2aYsJ.input$}} "
+        },
+        {
+          "renderTypeList": [
+            "reference"
+          ],
+          "valueType": "string",
+          "canEdit": true,
+          "key": "input",
+          "label": "input",
+          "customInputConfig": {
+            "selectValueTypeList": [
+              "string",
+              "number",
+              "boolean",
+              "object",
+              "arrayString",
+              "arrayNumber",
+              "arrayBoolean",
+              "arrayObject",
+              "arrayAny",
+              "any",
+              "chatHistory",
+              "datasetQuote",
+              "dynamic",
+              "selectApp",
+              "selectDataset"
+            ],
+            "showDescription": false,
+            "showDefaultValue": false
+          },
+          "required": true,
+          "value": [
+            "VARIABLE_NODE_ID",
+            "sentiment_subject"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "system_text",
+          "key": "system_text",
+          "label": "拼接结果",
+          "type": "static",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "begw59vPoxmm",
+      "name": "AI 对话#2",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": 1531.5542920431492,
+        "y": -575.6944371258185
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "model",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "label": "AI 模型",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "gpt-4o"
+        },
+        {
+          "key": "temperature",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 0,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 2000,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": true,
+          "valueType": "boolean",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "value": "system",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "boolean",
+          "value": false,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "max": 3000,
+          "valueType": "string",
+          "label": "提示词",
+          "description": "模型固定的引导词，通过调整该内容，可以引导模型聊天方向。该内容会被固定在上下文的开头。可通过输入 / 插入选择变量\n如果关联了知识库，你还可以通过适当的描述，来引导模型何时去调用知识库搜索。例如：\n你是电影《星际穿越》的助手，当用户询问与《星际穿越》相关的内容时，请搜索知识库并结合搜索结果进行回答。",
+          "placeholder": "core.app.tip.chatNodeSystemPromptTip",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "假设你非常善于协作，能够对上游提供的短视频文案资料进行整理，要求如下：去掉结构部分，保留原有的句子内容，形成一篇文案，在此基础上，在文案内容末尾增添，“关注代代老师，带你解锁更多情感知识！” 后，按照如下文案结构输出，不能改变格式：\n\n主题选择:{{$VARIABLE_NODE_ID.sentiment_subject$}}\n\n标题：{整理后的标题}\n\n文案：{整理后的文案内容}"
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "最多携带多少轮对话记录",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "label": "",
+          "debugLabel": "知识库引用",
+          "description": "",
+          "valueType": "datasetQuote",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "stringQuoteText",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "label": "文档引用",
+          "debugLabel": "文档引用",
+          "description": "通常用于接受用户上传的文档内容(这需要文档解析)，也可以用于引用其他字符串数据。",
+          "valueType": "string",
+          "valueDesc": "",
+          "toolDescription": "",
+          "value": [
+            "gwmYRBhCFCZx",
+            "answerText"
+          ]
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户问题",
+          "required": true,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "selectedTypeIndex": 1,
+          "value": "请根据文档资料，进行短视频文案整理"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "新的上下文",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": true,
+          "label": "AI 回复内容",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static",
+          "valueDesc": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "aiTYjmhucJdJ",
+      "name": "文本拼接#2",
+      "intro": "可对固定或传入的文本进行加工后输出，非字符串类型数据最终会转成字符串类型。",
+      "avatar": "core/workflow/template/textConcat",
+      "flowNodeType": "textEditor",
+      "position": {
+        "x": 2416.9665904868148,
+        "y": -310.19443712581847
+      },
+      "version": "486",
+      "inputs": [
+        {
+          "key": "system_addInputParam",
+          "renderTypeList": [
+            "addInputParam"
+          ],
+          "valueType": "dynamic",
+          "label": "",
+          "required": false,
+          "description": "可以引用其他节点的输出，作为文本拼接的变量，输入 / 唤起变量列表",
+          "customInputConfig": {
+            "selectValueTypeList": [
+              "string",
+              "number",
+              "boolean",
+              "object",
+              "arrayString",
+              "arrayNumber",
+              "arrayBoolean",
+              "arrayObject",
+              "arrayAny",
+              "any",
+              "chatHistory",
+              "datasetQuote",
+              "dynamic",
+              "selectApp",
+              "selectDataset"
+            ],
+            "showDescription": false,
+            "showDefaultValue": false
+          },
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "system_textareaInput",
+          "renderTypeList": [
+            "textarea"
+          ],
+          "valueType": "string",
+          "required": true,
+          "label": "拼接文本",
+          "placeholder": "workflow:input_variable_list",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "{{$begw59vPoxmm.answerText$}}\n"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "system_text",
+          "key": "system_text",
+          "label": "拼接结果",
+          "type": "static",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "bBEY5524lI8j",
+      "name": "AI 对话#3",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": 563.5820504603743,
+        "y": 612.0307159390097
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "model",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "label": "AI 模型",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "gpt-4o"
+        },
+        {
+          "key": "temperature",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 0,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 2000,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": true,
+          "valueType": "boolean",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "value": "system",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "boolean",
+          "value": false,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "max": 3000,
+          "valueType": "string",
+          "label": "提示词",
+          "description": "模型固定的引导词，通过调整该内容，可以引导模型聊天方向。该内容会被固定在上下文的开头。可通过输入 / 插入选择变量\n如果关联了知识库，你还可以通过适当的描述，来引导模型何时去调用知识库搜索。例如：\n你是电影《星际穿越》的助手，当用户询问与《星际穿越》相关的内容时，请搜索知识库并结合搜索结果进行回答。",
+          "placeholder": "core.app.tip.chatNodeSystemPromptTip",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "参考下述文案结构，根据用户输入的主题，生成类似文案，注意结构文案的语言特征\n引入主题\n句子: “为什么现在出轨的人越来越多了”\n分析: 直接提出问题，引起读者兴趣，设置讨论背景。\n引入研究\n句子: “先说科学家的发现吧 主要有三个方面的原因”\n分析: 清晰表明接下来将讨论的内容，并且数量化（三个方面），使读者容易跟随。\n第一部分：进化角度\n句子: “第一从进化角度看…”\n分析: 使用“第一”表明这是第一个原因，增强结构性。\n引用权威\n句子: “李银河老师说婚姻制度终将消亡…”\n分析: 引用专家观点，增加说服力，表明作者不是单纯主观评论。\n动物行为对比\n句子: “物种进化史上来看…”\n分析: 通过比较其他物种，提供科学背景，增强论证深度。\n历史延续性\n句子: “同时拥有多个性伴侣的历史远比一夫一妻制的婚姻要长久”\n分析: 强调人类历史的复杂性，进一步支持前面的论点。\n现代社会变化\n句子: “温饱问题解决了…”\n分析: 指出社会经济变化的影响，说明人们的需求和价值观发生变化。\n自我需求\n句子: “…很多就开始更看重自我的需求了”\n分析: 具体化人们在社会变化下的心理变化，增加论据的相关性。\n对制度的反思\n句子: “觉得制度规则都是限制自己的 就想打破”\n分析: 指出对传统制度的反叛心理，进一步分析出轨的心理动因。\n出轨的自我表现\n句子: “出轨就是追求自我的表现”\n分析: 将前面的观点总结为一个明确结论，便于读者理解。\n第二部分：心理角度\n句子: “第二从心理角度来看…”\n分析: 过渡到第二个原因，保持逻辑一致性。\n性观念的变化\n句子: “以前七八十年代性是和繁衍绑定在一起的”\n分析: 回顾历史，展示性观念的演变，增加论述的广度。\n现代性观念\n句子: “现在有调查就显示…”\n分析: 提供最新数据，显示现代人对性的理解与以往的不同。\n数据引用\n句子: “80.5%的男性和86%的女性都认为性是加深情感交流的”\n分析: 具体数据增强论证的客观性，给出明确的社会趋势。\n婚内不满\n句子: “如果夫妻感情不好…”\n分析: 说明不和谐婚姻的后果，进一步解释为何出轨现象增多。\n强迫性行为模式\n句子: “有些人出轨其实是一种强迫性行为模式”\n分析: 引入心理学概念，增加论述的专业性，拓宽视野。\n内心匮乏\n句子: “因为他们内心太匮乏了”\n分析: 解释出轨背后的心理动因，提供更深层次的理解。\n第三部分：环境因素\n句子: “第三就是环境给出轨基因提供了方便”\n分析: 引入第三个原因，继续保持结构的清晰性。\n科学研究\n句子: “纽约州立大学的一项研究发现…”\n分析: 引用具体研究，提供科学依据，增强论证的说服力。\n基因与行为\n句子: “体内带有多巴胺受体第四基因的人更容易出轨”\n分析: 通过生物学视角分析出轨行为，增加论述的层次感。\n现代社交环境\n句子: “通讯也越来越方便 网络社交发达诱惑越来越多”\n分析: 结合现代科技与社交环境，说明环境如何促进出轨现象。\n总结观点\n句子: “但无论怎么说 环境心理基因都不是出轨的理由”\n分析: 强调出轨的选择性，回归到道德和责任层面。\n道德呼吁\n句子: “可以不爱 但是真的不能背叛”\n分析: 用简洁明了的句子总结主旨，呼吁道德责任。\n行为选择\n句子: “如果你不想对婚姻专一 不要选择婚姻”\n分析: 提出明确的建议，给读者留下深刻印象，促使思考。"
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "最多携带多少轮对话记录",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "label": "",
+          "debugLabel": "知识库引用",
+          "description": "",
+          "valueType": "datasetQuote",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "stringQuoteText",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "label": "文档引用",
+          "debugLabel": "文档引用",
+          "description": "通常用于接受用户上传的文档内容(这需要文档解析)，也可以用于引用其他字符串数据。",
+          "valueType": "string",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户问题",
+          "required": true,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "value": [
+            "VARIABLE_NODE_ID",
+            "sentiment_subject"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "新的上下文",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": true,
+          "label": "AI 回复内容",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static",
+          "valueDesc": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "tMD5VLJelNEc",
+      "name": "AI 对话#4",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": 1531.5542920431492,
+        "y": 554.0307159390097
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "model",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "label": "AI 模型",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "gpt-4o"
+        },
+        {
+          "key": "temperature",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 0,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 2000,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": true,
+          "valueType": "boolean",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "value": "system",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "boolean",
+          "value": false,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "max": 3000,
+          "valueType": "string",
+          "label": "提示词",
+          "description": "core.app.tip.chatNodeSystemPromptTip",
+          "placeholder": "core.app.tip.chatNodeSystemPromptTip",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "假设你非常善于协作，能够对上游提供的短视频文案资料进行整理，要求如下：去掉结构部分，保留原有的句子内容，形成一篇文案，在此基础上，在文案内容末尾增添，“关注代代老师，带你解锁更多情感知识！” 后，按照如下文案结构输出，不能改变格式：\n\n主题选择:{{$VARIABLE_NODE_ID.sentiment_subject$}}\n\n标题：{整理后的标题}\n\n文案：{整理后的文案内容}"
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "workflow:max_dialog_rounds",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "label": "",
+          "debugLabel": "知识库引用",
+          "description": "",
+          "valueType": "datasetQuote",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "stringQuoteText",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "label": "文档引用",
+          "debugLabel": "文档引用",
+          "description": "app:document_quote_tip",
+          "valueType": "string",
+          "valueDesc": "",
+          "toolDescription": "",
+          "value": [
+            "bBEY5524lI8j",
+            "answerText"
+          ]
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户问题",
+          "required": true,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "selectedTypeIndex": 1,
+          "value": "请根据文档资料，进行短视频文案整理"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "common:core.module.output.label.New context",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": true,
+          "label": "common:core.module.output.label.Ai response content",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static"
+        }
+      ]
+    },
+    {
+      "nodeId": "hsEiSgZ32kio",
+      "name": "文本拼接#3",
+      "intro": "可对固定或传入的文本进行加工后输出，非字符串类型数据最终会转成字符串类型。",
+      "avatar": "core/workflow/template/textConcat",
+      "flowNodeType": "textEditor",
+      "position": {
+        "x": 2455.715063567159,
+        "y": 819.5307159390097
+      },
+      "version": "486",
+      "inputs": [
+        {
+          "key": "system_addInputParam",
+          "renderTypeList": [
+            "addInputParam"
+          ],
+          "valueType": "dynamic",
+          "label": "",
+          "required": false,
+          "description": "workflow:dynamic_input_description_concat",
+          "customInputConfig": {
+            "selectValueTypeList": [
+              "string",
+              "number",
+              "boolean",
+              "object",
+              "arrayString",
+              "arrayNumber",
+              "arrayBoolean",
+              "arrayObject",
+              "arrayAny",
+              "any",
+              "chatHistory",
+              "datasetQuote",
+              "dynamic",
+              "selectApp",
+              "selectDataset"
+            ],
+            "showDescription": false,
+            "showDefaultValue": false
+          },
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "system_textareaInput",
+          "renderTypeList": [
+            "textarea"
+          ],
+          "valueType": "string",
+          "required": true,
+          "label": "拼接文本",
+          "placeholder": "workflow:input_variable_list",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "{{$tMD5VLJelNEc.answerText$}}"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "system_text",
+          "key": "system_text",
+          "label": "workflow:concatenation_result",
+          "type": "static",
+          "valueType": "string",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "jVvZ0FPwQJxo",
+      "name": "指定回复",
+      "intro": "该模块可以直接回复一段指定的内容。常用于引导、提示。非字符串内容传入时，会转成字符串进行输出。",
+      "avatar": "core/workflow/template/reply",
+      "flowNodeType": "answerNode",
+      "position": {
+        "x": 3353.321277832938,
+        "y": 2113.233620870061
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "text",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "valueType": "any",
+          "required": true,
+          "label": "回复的内容",
+          "description": "可以使用 \\n 来实现连续换行。\n可以通过外部模块输入实现回复，外部模块输入时会覆盖当前填写的内容。\n如传入非字符串类型数据将会自动转成字符串",
+          "placeholder": "common:core.module.input.description.Response content",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "selectedTypeIndex": 1,
+          "value": [
+            "zX340hcrJHzL",
+            "system_text"
+          ]
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "qnuGboroWj3v",
+      "name": "AI 对话#5",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": 541.1179176478647,
+        "y": 1757.2336208700608
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "model",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "label": "AI 模型",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "gpt-4o"
+        },
+        {
+          "key": "temperature",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 0,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 2000,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": true,
+          "valueType": "boolean",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "value": "system",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "boolean",
+          "value": false,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "max": 3000,
+          "valueType": "string",
+          "label": "提示词",
+          "description": "core.app.tip.chatNodeSystemPromptTip",
+          "placeholder": "core.app.tip.chatNodeSystemPromptTip",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "参考下述文案结构，根据用户输入的主题，生成类似文案，注意结构文案的语言特征\n\n句子：“长期拒绝夫妻生活会有什么后果”\n标题分析： 现象描述 + 后果，\"后果\"会引起人们的警觉，达到吸引人的效果\n\n句子：“后果是他会报复你”\n分析：直接给出“后果”的结论，通过使用“报复”这个词来暗示后果的严重性和负面情绪，接着分析\"报复\"体现在哪里。\n描述报复的隐蔽性：\n\n句子：“而且在现实生活当中 很多人对伴侣的报复根本不明显 全是隐形攻击”\n分析：这里作者强调了报复行为的隐蔽性，暗示这种报复可能不易被察觉，但对受害者的影响是深远的。\n具体化报复行为的影响：\n\n句子：“让伴侣觉得这个日子过得无比折磨和累耗 想离婚还离不了”\n分析：作者通过描述受害者的感受来具体化报复行为的影响，增加了情感的共鸣。\n举例说明报复行为：\n\n句子：“比如说啊 不好好说话 阴阳怪气的 你干什么他都不配合你 还和你对着干 你干什么他都觉得你是错的 各种挑刺 以及最普遍或者常见的就是冷漠和出轨”\n分析：作者通过列举具体的行为例子来说明报复行为，使读者能够更直观地理解这些行为。\n解释离婚困难的原因：\n\n句子：“为什么离婚离不掉呢 因为你只要提离婚 他就会消失不和你谈 我们碰到过想起诉都找不到人的情况”\n分析：这里作者解释了为什么受害者难以通过离婚来结束这种关系，增加了问题的复杂性。\n心理层面的分析：\n\n句子：“因为被伴侣拒绝过夫妻生活 对一个人来说他的感觉是很受辱的 他会觉得自己的自尊心被伴侣放在地上摩擦”\n分析：作者从心理层面分析了拒绝夫妻生活对伴侣的影响，为报复行为提供了心理基础。\n感情的转变：\n\n句子：“所以你们之间的感情会被迅速地消耗掉 而转变成恨意”\n分析：作者描述了感情的转变过程，从爱到恨，进一步强调了拒绝夫妻生活的后果。\n报复心理的形成：\n\n句子：“当一个人恨另外一个人的时候 他就会产生报复心理”\n分析：这里作者总结了恨意如何导致报复心理的形成，为整个文案的主题提供了一个清晰的结论。\n反思与启示：\n\n句子：“而我们在咨询的时候 很多人根本意识不到伴侣这样对待自己 是因为自己长期拒绝了他的夫妻生活所导致的”\n分析：最后，作者提出了一个反思的角度，指出很多人可能没有意识到自己的行为与伴侣的报复行为之间的联系。\n"
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "workflow:max_dialog_rounds",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "label": "",
+          "debugLabel": "知识库引用",
+          "description": "",
+          "valueType": "datasetQuote",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "stringQuoteText",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "label": "文档引用",
+          "debugLabel": "文档引用",
+          "description": "app:document_quote_tip",
+          "valueType": "string",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户问题",
+          "required": true,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "value": [
+            "VARIABLE_NODE_ID",
+            "sentiment_subject"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "common:core.module.output.label.New context",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": true,
+          "label": "common:core.module.output.label.Ai response content",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static"
+        }
+      ]
+    },
+    {
+      "nodeId": "kiM1WpTGZ69j",
+      "name": "AI 对话#6",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": 1531.5542920431492,
+        "y": 1699.2336208700608
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "model",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "label": "AI 模型",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "gpt-4o"
+        },
+        {
+          "key": "temperature",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 0,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 2000,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": true,
+          "valueType": "boolean",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "value": "system",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "boolean",
+          "value": false,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "max": 3000,
+          "valueType": "string",
+          "label": "提示词",
+          "description": "core.app.tip.chatNodeSystemPromptTip",
+          "placeholder": "core.app.tip.chatNodeSystemPromptTip",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "假设你非常善于协作，能够对上游提供的短视频文案资料进行整理，要求如下：去掉结构部分，保留原有的句子内容，形成一篇文案，在此基础上，在文案内容末尾增添，“关注代代老师，带你解锁更多情感知识！” 后，按照如下文案结构输出，不能改变格式：\n\n主题选择:{{$VARIABLE_NODE_ID.sentiment_subject$}}\n\n标题：{整理后的标题}\n\n文案：{整理后的文案内容}"
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "workflow:max_dialog_rounds",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "label": "",
+          "debugLabel": "知识库引用",
+          "description": "",
+          "valueType": "datasetQuote",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "stringQuoteText",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "label": "文档引用",
+          "debugLabel": "文档引用",
+          "description": "app:document_quote_tip",
+          "valueType": "string",
+          "valueDesc": "",
+          "toolDescription": "",
+          "value": [
+            "qnuGboroWj3v",
+            "answerText"
+          ]
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户问题",
+          "required": true,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "selectedTypeIndex": 1,
+          "value": "请根据文档资料，进行短视频文案整理"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "common:core.module.output.label.New context",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": true,
+          "label": "common:core.module.output.label.Ai response content",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static"
+        }
+      ]
+    },
+    {
+      "nodeId": "zX340hcrJHzL",
+      "name": "文本拼接#4",
+      "intro": "可对固定或传入的文本进行加工后输出，非字符串类型数据最终会转成字符串类型。",
+      "avatar": "core/workflow/template/textConcat",
+      "flowNodeType": "textEditor",
+      "position": {
+        "x": 2481.7173648049848,
+        "y": 1964.7336208700608
+      },
+      "version": "486",
+      "inputs": [
+        {
+          "key": "system_addInputParam",
+          "renderTypeList": [
+            "addInputParam"
+          ],
+          "valueType": "dynamic",
+          "label": "",
+          "required": false,
+          "description": "workflow:dynamic_input_description_concat",
+          "customInputConfig": {
+            "selectValueTypeList": [
+              "string",
+              "number",
+              "boolean",
+              "object",
+              "arrayString",
+              "arrayNumber",
+              "arrayBoolean",
+              "arrayObject",
+              "arrayAny",
+              "any",
+              "chatHistory",
+              "datasetQuote",
+              "dynamic",
+              "selectApp",
+              "selectDataset"
+            ],
+            "showDescription": false,
+            "showDefaultValue": false
+          },
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "system_textareaInput",
+          "renderTypeList": [
+            "textarea"
+          ],
+          "valueType": "string",
+          "required": true,
+          "label": "拼接文本",
+          "placeholder": "workflow:input_variable_list",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "Hello，代代老师，根据您选的主题:{{$VARIABLE_NODE_ID.sentiment_subject$}},我为您生成了如下三篇爆款文案，请您审阅\n\n文案结构一：\n\n{{$aiTYjmhucJdJ.system_text$}}\n\n文案结构二：\n\n{{$hsEiSgZ32kio.system_text$}}\n\n文案结构三：\n\n{{$kiM1WpTGZ69j.answerText$}}"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "system_text",
+          "key": "system_text",
+          "label": "workflow:concatenation_result",
+          "type": "static",
+          "valueType": "string",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "448745",
+      "target": "lrwp5tY2aYsJ",
+      "sourceHandle": "448745-source-right",
+      "targetHandle": "lrwp5tY2aYsJ-target-left"
+    },
+    {
+      "source": "lrwp5tY2aYsJ",
+      "target": "gwmYRBhCFCZx",
+      "sourceHandle": "lrwp5tY2aYsJ-source-right",
+      "targetHandle": "gwmYRBhCFCZx-target-left"
+    },
+    {
+      "source": "gwmYRBhCFCZx",
+      "target": "begw59vPoxmm",
+      "sourceHandle": "gwmYRBhCFCZx-source-right",
+      "targetHandle": "begw59vPoxmm-target-left"
+    },
+    {
+      "source": "begw59vPoxmm",
+      "target": "aiTYjmhucJdJ",
+      "sourceHandle": "begw59vPoxmm-source-right",
+      "targetHandle": "aiTYjmhucJdJ-target-left"
+    },
+    {
+      "source": "begw59vPoxmm",
+      "target": "bBEY5524lI8j",
+      "sourceHandle": "begw59vPoxmm-source-right",
+      "targetHandle": "bBEY5524lI8j-target-left"
+    },
+    {
+      "source": "bBEY5524lI8j",
+      "target": "tMD5VLJelNEc",
+      "sourceHandle": "bBEY5524lI8j-source-right",
+      "targetHandle": "tMD5VLJelNEc-target-left"
+    },
+    {
+      "source": "tMD5VLJelNEc",
+      "target": "hsEiSgZ32kio",
+      "sourceHandle": "tMD5VLJelNEc-source-right",
+      "targetHandle": "hsEiSgZ32kio-target-left"
+    },
+    {
+      "source": "aiTYjmhucJdJ",
+      "target": "hsEiSgZ32kio",
+      "sourceHandle": "aiTYjmhucJdJ-source-right",
+      "targetHandle": "hsEiSgZ32kio-target-left"
+    },
+    {
+      "source": "kiM1WpTGZ69j",
+      "target": "zX340hcrJHzL",
+      "sourceHandle": "kiM1WpTGZ69j-source-right",
+      "targetHandle": "zX340hcrJHzL-target-left"
+    },
+    {
+      "source": "qnuGboroWj3v",
+      "target": "kiM1WpTGZ69j",
+      "sourceHandle": "qnuGboroWj3v-source-right",
+      "targetHandle": "kiM1WpTGZ69j-target-left"
+    },
+    {
+      "source": "zX340hcrJHzL",
+      "target": "jVvZ0FPwQJxo",
+      "sourceHandle": "zX340hcrJHzL-source-right",
+      "targetHandle": "jVvZ0FPwQJxo-target-left"
+    },
+    {
+      "source": "tMD5VLJelNEc",
+      "target": "qnuGboroWj3v",
+      "sourceHandle": "tMD5VLJelNEc-source-right",
+      "targetHandle": "qnuGboroWj3v-target-left"
+    },
+    {
+      "source": "hsEiSgZ32kio",
+      "target": "zX340hcrJHzL",
+      "sourceHandle": "hsEiSgZ32kio-source-right",
+      "targetHandle": "zX340hcrJHzL-target-left"
+    }
+  ],
+  "chatConfig": {
+    "welcomeText": "您好！很高兴能为您的短视频创作提供帮助。请您在如下主题上进行选择创作方向：\n[分手]\n[恋爱]\n[情侣]\n[夫妻]\n[离婚]\n[婆媳]\n[焦虑]\n[幸福感]\n[抑郁]\n完成后请在聊天框中输入：开始创作",
+    "variables": [
+      {
+        "id": "poddxd",
+        "key": "sentiment_subject",
+        "label": "创作方向",
+        "type": "select",
+        "required": true,
+        "maxLen": 50,
+        "enums": [
+          {
+            "value": "分手"
+          },
+          {
+            "value": "恋爱"
+          },
+          {
+            "value": "情侣"
+          },
+          {
+            "value": "夫妻"
+          },
+          {
+            "value": "离婚"
+          },
+          {
+            "value": "婆媳"
+          },
+          {
+            "value": "焦虑"
+          },
+          {
+            "value": "幸福感"
+          },
+          {
+            "value": "抑郁"
+          }
+        ],
+        "valueType": "string",
+        "icon": "core/app/variable/select"
+      }
+    ],
+    "scheduledTriggerConfig": {
+      "cronString": "",
+      "timezone": "Asia/Shanghai",
+      "defaultPrompt": ""
+    },
+    "chatInputGuide": {
+      "open": true,
+      "textList": [],
+      "customUrl": ""
+    },
+    "_id": "6709edfa0903b8298d58b70e"
+  }
+}
