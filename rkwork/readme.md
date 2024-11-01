@@ -63,8 +63,8 @@ curl --location --request POST 'http://127.0.0.1:3001/api/v1/chat/completions' \
 ### 2 api 对接Fastgpt平台发布应用
 
 ```
-curl --location --request POST 'http://127.0.0.1:3000/api/v1/chat/completions' \
---header 'Authorization: Bearer fastgpt-xX2FbZzgsKIJIVXH1Kng0GtBY89kYXJbRZ2Bre1N1Zh0ajU6jIOW9' \
+curl --location --request POST 'http://154.211.13.226:3000/api/v1/chat/completions' \
+--header 'Authorization: Bearer fastgpt-ccmeCIJp1cfdFaB2vbyIDoDrfzHn7tcQFUrErJNb8Owy8AKxlWI8fO' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "chatId": "111",
@@ -78,6 +78,8 @@ curl --location --request POST 'http://127.0.0.1:3000/api/v1/chat/completions' \
     ]
 }'
 ```
+
+
 
 
 
@@ -188,3 +190,13 @@ git commit -am 'rk: v1.0.0 两个文件夹: docker compose 快速启动, API接�
 
 >Unable to load connection: MongoServerSelectionError: getaddrinfo EAI_AGAIN mongo
 
+## 功能
+
+修改分割下限
+>/home/rkwork/rkwork/project/FastGPT/projects/app/data/config.json
+
+>/home/rkwork/rkwork/project/FastGPT/projects/app/src/pages/api/core/dataset/create.ts
+
+>embeddingChunkSize
+
+/home/rkwork/rkwork/project/FastGPT/projects/app/src/pages/dataset/detail/components/Import/Context.tsx  149

@@ -7,7 +7,7 @@ api 对接fastgpt平台模型
 '''
 curl http://127.0.0.1:3000/api/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer fastgpt-h07mC7ZqD919Zsa3tSps66clDLEuTr1oe2VtFbLz6Hb78l0qyWjr" \
+  -H "Authorization: Bearer fastgpt-ccmeCIJp1cfdFaB2vbyIDoDrfzHn7tcQFUrErJNb8Owy8AKxlWI8fO" \
   -d '{
     "model": "glm-4",
     "messages": [
@@ -55,10 +55,10 @@ curl http://127.0.0.1:3000/api/v1/chat/completions \
 
 import requests   # 可用
 
-url = "http://127.0.0.1:3000/api/v1/chat/completions"
+url = "http://154.211.13.226:3000/api/v1/chat/completions"
 headers = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer fastgpt-h07mC7ZqD919Zsa3tSps66clDLEuTr1oe2VtFbLz6Hb78l0qyWjr"
+    "Authorization": "Bearer fastgpt-ccmeCIJp1cfdFaB2vbyIDoDrfzHn7tcQFUrErJNb8Owy8AKxlWI8fO"
 }
 data = {
     "model": "glm-4",

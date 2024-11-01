@@ -1,0 +1,734 @@
+﻿{
+  "nodes": [
+    {
+      "nodeId": "userGuide",
+      "name": "common:core.module.template.system_config",
+      "intro": "common:core.module.template.system_config_info",
+      "avatar": "core/workflow/template/systemConfig",
+      "flowNodeType": "userGuide",
+      "position": {
+        "x": -1995.3332375592652,
+        "y": -608.7441146218721
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "welcomeText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "string",
+          "label": "core.app.Welcome Text",
+          "value": ""
+        },
+        {
+          "key": "variables",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "core.app.Chat Variable",
+          "value": []
+        },
+        {
+          "key": "questionGuide",
+          "valueType": "boolean",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "core.app.Question Guide",
+          "value": false
+        },
+        {
+          "key": "tts",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": {
+            "type": "web"
+          }
+        },
+        {
+          "key": "whisper",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": {
+            "open": false,
+            "autoSend": false,
+            "autoTTSResponse": false
+          }
+        },
+        {
+          "key": "scheduleTrigger",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": null
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "448745",
+      "name": "common:core.module.template.work_start",
+      "intro": "",
+      "avatar": "core/workflow/template/workflowStart",
+      "flowNodeType": "workflowStart",
+      "position": {
+        "x": -877.5791170634948,
+        "y": -608.7441146218721
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "common:core.module.input.label.user question",
+          "required": true,
+          "toolDescription": "用户问题",
+          "debugLabel": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "userChatInput",
+          "key": "userChatInput",
+          "label": "common:core.module.input.label.user question",
+          "type": "static",
+          "valueType": "string",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "ihWXiYcPSk54",
+      "name": "判断器",
+      "intro": "根据一定的条件，执行不同的分支。",
+      "avatar": "core/workflow/template/ifelse",
+      "flowNodeType": "ifElseNode",
+      "showStatus": true,
+      "position": {
+        "x": 1673.7388167462077,
+        "y": -906.8506611092673
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "ifElseList",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": [
+            {
+              "condition": "AND",
+              "list": [
+                {
+                  "variable": [
+                    "vm6dwxVI41aH",
+                    "selectResult"
+                  ],
+                  "condition": "equalTo",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "condition": "AND",
+              "list": [
+                {
+                  "variable": [
+                    "vm6dwxVI41aH",
+                    "selectResult"
+                  ],
+                  "condition": "equalTo",
+                  "value": "2"
+                }
+              ]
+            }
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ifElseResult",
+          "key": "ifElseResult",
+          "label": "workflow:judgment_result",
+          "valueType": "string",
+          "type": "static",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "ljYjuFkr7N52",
+      "name": "讲故事类型文案结构2",
+      "intro": "该模块可以直接回复一段指定的内容。常用于引导、提示。非字符串内容传入时，会转成字符串进行输出。",
+      "avatar": "core/workflow/template/reply",
+      "flowNodeType": "answerNode",
+      "position": {
+        "x": 2618.480921044456,
+        "y": -427.0510565156025
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "text",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "valueType": "any",
+          "required": true,
+          "label": "回复的内容",
+          "description": "common:core.module.input.description.Response content",
+          "placeholder": "common:core.module.input.description.Response content",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "selectedTypeIndex": 1,
+          "value": [
+            "vm6dwxVI41aH",
+            "selectResult"
+          ]
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "glc3cxRfDFFr",
+      "name": "讲故事类型文案结构1",
+      "intro": "该模块可以直接回复一段指定的内容。常用于引导、提示。非字符串内容传入时，会转成字符串进行输出。",
+      "avatar": "core/workflow/template/reply",
+      "flowNodeType": "answerNode",
+      "position": {
+        "x": 4584.431844365281,
+        "y": -845.3506611092673
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "text",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "valueType": "any",
+          "required": true,
+          "label": "回复的内容",
+          "description": "common:core.module.input.description.Response content",
+          "placeholder": "common:core.module.input.description.Response content",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "selectedTypeIndex": 1,
+          "value": [
+            "vm6dwxVI41aH",
+            "selectResult"
+          ]
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "sn3zRYmfxy4U",
+      "name": "判断器#2",
+      "intro": "根据一定的条件，执行不同的分支。",
+      "avatar": "core/workflow/template/ifelse",
+      "flowNodeType": "ifElseNode",
+      "showStatus": true,
+      "position": {
+        "x": -322.92029750545566,
+        "y": -608.7441146218721
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "ifElseList",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": [
+            {
+              "condition": "AND",
+              "list": [
+                {
+                  "variable": [
+                    "VARIABLE_NODE_ID",
+                    "文案类型"
+                  ],
+                  "condition": "equalTo",
+                  "value": "故事型"
+                }
+              ]
+            },
+            {
+              "condition": "AND",
+              "list": [
+                {
+                  "variable": [
+                    "VARIABLE_NODE_ID",
+                    "文案类型"
+                  ],
+                  "condition": "equalTo",
+                  "value": "盘点型"
+                }
+              ]
+            }
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ifElseResult",
+          "key": "ifElseResult",
+          "label": "workflow:judgment_result",
+          "valueType": "string",
+          "type": "static",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "vm6dwxVI41aH",
+      "name": "用户选择",
+      "intro": "该模块可配置多个选项，以供对话时选择。不同选项可导向不同工作流支线",
+      "avatar": "core/workflow/template/userSelect",
+      "flowNodeType": "userSelect",
+      "showStatus": true,
+      "position": {
+        "x": 743.2326067390386,
+        "y": -993.8506611092673
+      },
+      "version": "489",
+      "inputs": [
+        {
+          "key": "description",
+          "renderTypeList": [
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "说明文字",
+          "description": "app:workflow.select_description_tip",
+          "placeholder": "app:workflow.select_description_placeholder",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "感谢您选择了【故事型】文案，接下来 请选择您 喜欢的 文案结构类型，我会为您创组3篇符合该文案结构的文案内容！\n1 讲故事类型文案结构一：欺凌场景(性格) | 孩子  +  做法1 加剧 + 做法2 无效 | 老师或家长 + 转机 寓言递进  + 寓言总结\n2 讲故事类型文案结构二：\n3 ..."
+        },
+        {
+          "renderTypeList": [
+            "custom"
+          ],
+          "valueType": "any",
+          "label": "",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "key": "userSelectOptions",
+          "value": [
+            {
+              "value": "1",
+              "key": "option1"
+            },
+            {
+              "value": "2",
+              "key": "option2"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "selectResult",
+          "key": "selectResult",
+          "required": true,
+          "label": "app:workflow.select_result",
+          "valueType": "string",
+          "type": "static",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "hnnnDYFsmXK0",
+      "name": "AI 对话",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": 3520.9117674552526,
+        "y": -1201.3506611092673
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "model",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "label": "AI 模型",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "gpt-4o"
+        },
+        {
+          "key": "temperature",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 0,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 2000,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": true,
+          "valueType": "boolean",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "value": "system",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "boolean",
+          "value": false,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "max": 3000,
+          "valueType": "string",
+          "label": "提示词",
+          "description": "模型固定的引导词，通过调整该内容，可以引导模型聊天方向。该内容会被固定在上下文的开头。可通过输入 / 插入选择变量\n如果关联了知识库，你还可以通过适当的描述，来引导模型何时去调用知识库搜索。例如：\n你是电影《星际穿越》的助手，当用户询问与《星际穿越》相关的内容时，请搜索知识库并结合搜索结果进行回答。",
+          "placeholder": "core.app.tip.chatNodeSystemPromptTip",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "文案仿写，要求，结构一样，内容相关性高，语言特征一致，用词要能吸引人，贴合实际，细节部分到位，根据额外信息适当修改内容，参考文案：\n原文案：\n有一个小孩胖胖的 到了学校呢 同学们笑他 他心情很愤怒 只要有人笑他呢 他就要跟人家干架 所以他经常伤痕累累的回到家 他妈妈就好心疼 去找老师 老师呢 就会跟这帮小朋友说 你们不要说他了 你们知道不要等于什么 等于要对不对 结果更多人笑他了 一笑他就生气 一生气就吵架 一吵架就打架 老师就跟他讲 你就不能不理他们吗 他们笑归他们了 所以你不管他不行吗 结果就开始说 我不行的 我受不了 他们就不能笑我 好了这个时候呢 学校请了一个心理辅导师过来 这个心理辅导师 对这件事情非常有兴趣 他把这个小男孩叫到办公室 等一下你坐在这里 听他们嘲笑你 如果五分钟的时间 你可以不生气 不管他们说什么 你都可以不生气 你可以赢五百块哦 因为五分钟时间之内 你生气了 他们就赢五百块哦 然后他问这个小男孩 如果你赢了五百块 你会拿来做什么 这个小男孩说 哇哦 如果我赢了五百块 我就想买一辆自行车 我好想买一辆自行车 可是他们说我太胖了 坐上去轮胎就会爆 我好想买一辆自行车 这个心理学家说 那可能你待会可以买一辆自行车 如果他们骂你 你生气了 这五百块就给他们 他们就好赚了 既能骂你又能赚钱 然后这秦同学在这边已经怎么样 跃跃欲试了 对不对 我要把你骂到生气 好了 计时五分钟开始 这些人兴起所有恶毒言来攻击他 前面小男孩生不生气 他就晃着两个小脚 骂呀骂呀骂呀 骂 我不会生气 我有五百块 五分钟过去了 这些人骂得好累 生不生气 生气 五百块拿到了 然后这个心理学家跟他说 我们再来玩一个升级一点的游戏 等下他们要骂你二十分钟 二十分钟 如果你不生气 你可以拿一千块 他说 我想知道 如果你得到这一千块 你会干什么 小男孩想了好久 他眼睛突然红了 他说 我想给我奶奶买个拐杖 我奶奶的腿不好 他总是扶着墙走路 心理学家说 你真的是一个好善良的孩子 我相信奶奶收到拐杖 一定是非常开心的 然后你们准备好了没 喝点水准备好了没 这帮已经有点气累的了 二十分钟一千块 干不干 干 继续骂 没到十来分钟 已经累得不行了 这个小男孩在这边骂呀骂呀 十来分钟休战 一千块拿走 紧跟着心理学家又跟他说 我们打个更好玩的游戏 两千块敢不敢赌 这两千块维持时间是两天 这两天的时间 如果他们用刚才的 肥胖的恶毒的语言攻击你 那么你可以决定自己不生气 胆千块 后来这帮同学说不玩了 事情就这样 心理学家跟男孩子说 你是有权利生气的 因为有些事情 对你真的是造成了伤害 可是我想告诉你 你也是有权利不生气的 你可以选择生气对他们打成一堆 你也可以选择淡然的 有一道屏障挡住这些伤害 到底生气还是不生气 是你选择的 不是他们来决定\n"
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "最多携带多少轮对话记录",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "label": "",
+          "debugLabel": "知识库引用",
+          "description": "",
+          "valueType": "datasetQuote",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "stringQuoteText",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "label": "文档引用",
+          "debugLabel": "文档引用",
+          "description": "通常用于接受用户上传的文档内容(这需要文档解析)，也可以用于引用其他字符串数据。",
+          "valueType": "string",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户问题",
+          "required": true,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "value": [
+            "lN7HHD8FPVLg",
+            "system_text"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "新的上下文",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": true,
+          "label": "AI 回复内容",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static",
+          "valueDesc": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "lN7HHD8FPVLg",
+      "name": "文本拼接",
+      "intro": "可对固定或传入的文本进行加工后输出，非字符串类型数据最终会转成字符串类型。",
+      "avatar": "core/workflow/template/textConcat",
+      "flowNodeType": "textEditor",
+      "position": {
+        "x": 2618.480921044456,
+        "y": -993.8506611092673
+      },
+      "version": "486",
+      "inputs": [
+        {
+          "key": "system_addInputParam",
+          "renderTypeList": [
+            "addInputParam"
+          ],
+          "valueType": "dynamic",
+          "label": "",
+          "required": false,
+          "description": "可以引用其他节点的输出，作为文本拼接的变量，输入 / 唤起变量列表",
+          "customInputConfig": {
+            "selectValueTypeList": [
+              "string",
+              "number",
+              "boolean",
+              "object",
+              "arrayString",
+              "arrayNumber",
+              "arrayBoolean",
+              "arrayObject",
+              "arrayAny",
+              "any",
+              "chatHistory",
+              "datasetQuote",
+              "dynamic",
+              "selectApp",
+              "selectDataset"
+            ],
+            "showDescription": false,
+            "showDefaultValue": false
+          },
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "system_textareaInput",
+          "renderTypeList": [
+            "textarea"
+          ],
+          "valueType": "string",
+          "required": true,
+          "label": "拼接文本",
+          "placeholder": "workflow:input_variable_list",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "额外信息：“个子高，在同龄中很突兀”，"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "system_text",
+          "key": "system_text",
+          "label": "拼接结果",
+          "type": "static",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "ihWXiYcPSk54",
+      "target": "ljYjuFkr7N52",
+      "sourceHandle": "ihWXiYcPSk54-source-ELSE IF 1",
+      "targetHandle": "ljYjuFkr7N52-target-left"
+    },
+    {
+      "source": "448745",
+      "target": "sn3zRYmfxy4U",
+      "sourceHandle": "448745-source-right",
+      "targetHandle": "sn3zRYmfxy4U-target-left"
+    },
+    {
+      "source": "sn3zRYmfxy4U",
+      "target": "vm6dwxVI41aH",
+      "sourceHandle": "sn3zRYmfxy4U-source-IF",
+      "targetHandle": "vm6dwxVI41aH-target-left"
+    },
+    {
+      "source": "vm6dwxVI41aH",
+      "target": "ihWXiYcPSk54",
+      "sourceHandle": "vm6dwxVI41aH-source-option1",
+      "targetHandle": "ihWXiYcPSk54-target-left"
+    },
+    {
+      "source": "ihWXiYcPSk54",
+      "target": "lN7HHD8FPVLg",
+      "sourceHandle": "ihWXiYcPSk54-source-IF",
+      "targetHandle": "lN7HHD8FPVLg-target-left"
+    },
+    {
+      "source": "lN7HHD8FPVLg",
+      "target": "hnnnDYFsmXK0",
+      "sourceHandle": "lN7HHD8FPVLg-source-right",
+      "targetHandle": "hnnnDYFsmXK0-target-left"
+    },
+    {
+      "source": "hnnnDYFsmXK0",
+      "target": "glc3cxRfDFFr",
+      "sourceHandle": "hnnnDYFsmXK0-source-right",
+      "targetHandle": "glc3cxRfDFFr-target-left"
+    }
+  ],
+  "chatConfig": {
+    "welcomeText": "请选择希望创作的文案类型后，请输入任意内容触发工作流～\n",
+    "variables": [
+      {
+        "id": "xzg3gj",
+        "key": "文案类型",
+        "label": "struction_type",
+        "type": "select",
+        "required": true,
+        "maxLen": 50,
+        "enums": [
+          {
+            "value": "故事型"
+          },
+          {
+            "value": "盘点型"
+          }
+        ],
+        "valueType": "string",
+        "icon": "core/app/variable/select"
+      }
+    ]
+  }
+}

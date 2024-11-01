@@ -191,7 +191,7 @@ const DatasetImportContextProvider = ({ children }: { children: React.ReactNode 
       chunkSizeField: 'embeddingChunkSize' as ChunkSizeFieldType,
       chunkOverlapRatio: 0.2,
       maxChunkSize: vectorModel?.maxToken || 512,
-      minChunkSize: 100,
+      minChunkSize: 10,
       autoChunkSize: vectorModel?.defaultToken || 512,
       chunkSize: embeddingChunkSize,
       showChunkInput: true,

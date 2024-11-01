@@ -1,0 +1,434 @@
+﻿{
+  "nodes": [
+    {
+      "nodeId": "userGuide",
+      "name": "common:core.module.template.system_config",
+      "intro": "common:core.module.template.system_config_info",
+      "avatar": "core/workflow/template/systemConfig",
+      "flowNodeType": "userGuide",
+      "position": {
+        "x": -1995.3332375592652,
+        "y": -608.7441146218721
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "welcomeText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "string",
+          "label": "core.app.Welcome Text",
+          "value": ""
+        },
+        {
+          "key": "variables",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "core.app.Chat Variable",
+          "value": []
+        },
+        {
+          "key": "questionGuide",
+          "valueType": "boolean",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "core.app.Question Guide",
+          "value": false
+        },
+        {
+          "key": "tts",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": {
+            "type": "web"
+          }
+        },
+        {
+          "key": "whisper",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": {
+            "open": false,
+            "autoSend": false,
+            "autoTTSResponse": false
+          }
+        },
+        {
+          "key": "scheduleTrigger",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": null
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "448745",
+      "name": "common:core.module.template.work_start",
+      "intro": "",
+      "avatar": "core/workflow/template/workflowStart",
+      "flowNodeType": "workflowStart",
+      "position": {
+        "x": -877.5791170634948,
+        "y": -608.7441146218721
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "common:core.module.input.label.user question",
+          "required": true,
+          "toolDescription": "用户问题",
+          "debugLabel": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "userChatInput",
+          "key": "userChatInput",
+          "label": "common:core.module.input.label.user question",
+          "type": "static",
+          "valueType": "string",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "ihWXiYcPSk54",
+      "name": "判断器",
+      "intro": "根据一定的条件，执行不同的分支。",
+      "avatar": "core/workflow/template/ifelse",
+      "flowNodeType": "ifElseNode",
+      "showStatus": true,
+      "position": {
+        "x": 1672.5164919922295,
+        "y": -916.8506611092673
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "ifElseList",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": [
+            {
+              "condition": "AND",
+              "list": [
+                {
+                  "variable": [
+                    "vm6dwxVI41aH",
+                    "selectResult"
+                  ],
+                  "condition": "equalTo",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "condition": "AND",
+              "list": [
+                {
+                  "variable": [
+                    "vm6dwxVI41aH",
+                    "selectResult"
+                  ],
+                  "condition": "equalTo",
+                  "value": "2"
+                }
+              ]
+            }
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ifElseResult",
+          "key": "ifElseResult",
+          "label": "判断结果",
+          "valueType": "string",
+          "type": "static",
+          "valueDesc": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "ljYjuFkr7N52",
+      "name": "讲故事类型文案结构2",
+      "intro": "该模块可以直接回复一段指定的内容。常用于引导、提示。非字符串内容传入时，会转成字符串进行输出。",
+      "avatar": "core/workflow/template/reply",
+      "flowNodeType": "answerNode",
+      "position": {
+        "x": 2740.3523427779196,
+        "y": -702.9213445867247
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "text",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "valueType": "any",
+          "required": true,
+          "label": "回复的内容",
+          "description": "可以使用 \\n 来实现连续换行。\n可以通过外部模块输入实现回复，外部模块输入时会覆盖当前填写的内容。\n如传入非字符串类型数据将会自动转成字符串",
+          "placeholder": "common:core.module.input.description.Response content",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "selectedTypeIndex": 1,
+          "value": [
+            "vm6dwxVI41aH",
+            "selectResult"
+          ]
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "glc3cxRfDFFr",
+      "name": "讲故事类型文案结构1",
+      "intro": "该模块可以直接回复一段指定的内容。常用于引导、提示。非字符串内容传入时，会转成字符串进行输出。",
+      "avatar": "core/workflow/template/reply",
+      "flowNodeType": "answerNode",
+      "position": {
+        "x": 2740.3523427779196,
+        "y": -861.9087317149929
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "text",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "valueType": "any",
+          "required": true,
+          "label": "回复的内容",
+          "description": "可以使用 \\n 来实现连续换行。\n可以通过外部模块输入实现回复，外部模块输入时会覆盖当前填写的内容。\n如传入非字符串类型数据将会自动转成字符串",
+          "placeholder": "common:core.module.input.description.Response content",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "selectedTypeIndex": 1,
+          "value": [
+            "vm6dwxVI41aH",
+            "selectResult"
+          ]
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "sn3zRYmfxy4U",
+      "name": "判断器#2",
+      "intro": "根据一定的条件，执行不同的分支。",
+      "avatar": "core/workflow/template/ifelse",
+      "flowNodeType": "ifElseNode",
+      "showStatus": true,
+      "position": {
+        "x": -322.92029750545566,
+        "y": -608.7441146218721
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "ifElseList",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": [
+            {
+              "condition": "AND",
+              "list": [
+                {
+                  "variable": [
+                    "VARIABLE_NODE_ID",
+                    "文案类型"
+                  ],
+                  "condition": "equalTo",
+                  "value": "故事型"
+                }
+              ]
+            },
+            {
+              "condition": "AND",
+              "list": [
+                {
+                  "variable": [
+                    "VARIABLE_NODE_ID",
+                    "文案类型"
+                  ],
+                  "condition": "equalTo",
+                  "value": "盘点型"
+                }
+              ]
+            }
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ifElseResult",
+          "key": "ifElseResult",
+          "label": "workflow:judgment_result",
+          "valueType": "string",
+          "type": "static",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "vm6dwxVI41aH",
+      "name": "用户选择",
+      "intro": "该模块可配置多个选项，以供对话时选择。不同选项可导向不同工作流支线",
+      "avatar": "core/workflow/template/userSelect",
+      "flowNodeType": "userSelect",
+      "showStatus": true,
+      "position": {
+        "x": 743.2326067390386,
+        "y": -993.8506611092673
+      },
+      "version": "489",
+      "inputs": [
+        {
+          "key": "description",
+          "renderTypeList": [
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "说明文字",
+          "description": "你可以添加一段说明文字，用以向用户说明每个选项代表的含义。",
+          "placeholder": "app:workflow.select_description_placeholder",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "value": "感谢您选择了【故事型】文案，接下来 请选择您 喜欢的 文案结构类型，我会为您创组3篇符合该文案结构的文案内容！\n1 讲故事类型文案结构一：欺凌场景(性格) | 孩子  +  做法1 加剧 + 做法2 无效 | 老师或家长 + 转机 寓言递进  + 寓言总结\n2 讲故事类型文案结构二：\n3 ..."
+        },
+        {
+          "renderTypeList": [
+            "custom"
+          ],
+          "valueType": "any",
+          "label": "",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "key": "userSelectOptions",
+          "value": [
+            {
+              "value": "1",
+              "key": "option1"
+            },
+            {
+              "value": "2",
+              "key": "option2"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "selectResult",
+          "key": "selectResult",
+          "required": true,
+          "label": "选择结果",
+          "valueType": "string",
+          "type": "static",
+          "valueDesc": "",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "ihWXiYcPSk54",
+      "target": "ljYjuFkr7N52",
+      "sourceHandle": "ihWXiYcPSk54-source-ELSE IF 1",
+      "targetHandle": "ljYjuFkr7N52-target-left"
+    },
+    {
+      "source": "ihWXiYcPSk54",
+      "target": "glc3cxRfDFFr",
+      "sourceHandle": "ihWXiYcPSk54-source-IF",
+      "targetHandle": "glc3cxRfDFFr-target-left"
+    },
+    {
+      "source": "448745",
+      "target": "sn3zRYmfxy4U",
+      "sourceHandle": "448745-source-right",
+      "targetHandle": "sn3zRYmfxy4U-target-left"
+    },
+    {
+      "source": "sn3zRYmfxy4U",
+      "target": "vm6dwxVI41aH",
+      "sourceHandle": "sn3zRYmfxy4U-source-IF",
+      "targetHandle": "vm6dwxVI41aH-target-left"
+    },
+    {
+      "source": "vm6dwxVI41aH",
+      "target": "ihWXiYcPSk54",
+      "sourceHandle": "vm6dwxVI41aH-source-option1",
+      "targetHandle": "ihWXiYcPSk54-target-left"
+    }
+  ],
+  "chatConfig": {
+    "welcomeText": "请选择希望创作的文案类型后，请输入任意内容触发工作流～\n",
+    "variables": [
+      {
+        "id": "xzg3gj",
+        "key": "文案类型",
+        "label": "struction_type",
+        "type": "select",
+        "required": true,
+        "maxLen": 50,
+        "enums": [
+          {
+            "value": "故事型"
+          },
+          {
+            "value": "盘点型"
+          }
+        ],
+        "valueType": "string",
+        "icon": "core/app/variable/select"
+      }
+    ]
+  }
+}
