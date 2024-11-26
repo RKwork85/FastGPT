@@ -1,0 +1,502 @@
+[
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_1",
+        "Data": "痛点方向：孩子作业拖延"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_2",
+        "Data": "痛点方向：孩子总想吃快餐"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_3",
+        "Data": "痛点方向：孩子希望晚上出去玩"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_4",
+        "Data": "痛点方向：孩子不想参加家庭聚会"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_5",
+        "Data": "痛点方向：孩子希望有自己的选择"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_6",
+        "Data": "痛点方向：孩子沉迷于手机"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_7",
+        "Data": "痛点方向：孩子不愿意洗澡"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_8",
+        "Data": "痛点方向：孩子希望换发型"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_9",
+        "Data": "痛点方向：孩子不想上补习班"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_10",
+        "Data": "痛点方向：孩子与兄弟姐妹争吵"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_11",
+        "Data": "痛点方向：孩子希望尽快完成作业"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_12",
+        "Data": "痛点方向：孩子想看自己喜欢的节目"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_13",
+        "Data": "痛点方向：孩子想要宠物"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_14",
+        "Data": "痛点方向：孩子不想参加学校活动"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_15",
+        "Data": "痛点方向：孩子对父母的建议不屑一顾"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_16",
+        "Data": "痛点方向：孩子希望有更多零用钱"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_17",
+        "Data": "痛点方向：孩子不愿意分享玩具"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_18",
+        "Data": "痛点方向：孩子希望有自己的空间"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_19",
+        "Data": "痛点方向：孩子希望尝试新运动"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_20",
+        "Data": "痛点方向：孩子希望有更多玩具"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_21",
+        "Data": "痛点方向：孩子不愿意做家务"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_22",
+        "Data": "痛点方向：孩子对父母的朋友感到反感"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_23",
+        "Data": "痛点方向：孩子不想写读后感"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_24",
+        "Data": "痛点方向：孩子希望有自己的衣服风格"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_25",
+        "Data": "痛点方向：孩子希望参加某个活动"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_26",
+        "Data": "痛点方向：孩子对学习缺乏兴趣"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_27",
+        "Data": "痛点方向：孩子不想听父母的教导"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_28",
+        "Data": "痛点方向：孩子希望放假去旅行"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_29",
+        "Data": "痛点方向：孩子不想和父母一起购物"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_30",
+        "Data": "痛点方向：孩子希望不再上课外班"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_31",
+        "Data": "痛点方向：孩子希望有更多社交活动"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_32",
+        "Data": "痛点方向：孩子希望获得更多独立"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_33",
+        "Data": "痛点方向：孩子不想见亲戚"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_34",
+        "Data": "痛点方向：孩子希望有更多自由时间"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_35",
+        "Data": "痛点方向：孩子不想遵守作息时间"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_36",
+        "Data": "痛点方向：孩子希望追求自己的爱好"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_37",
+        "Data": "痛点方向：孩子不想做家庭作业"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_38",
+        "Data": "痛点方向：孩子对父母的期望感到压力"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_39",
+        "Data": "痛点方向：孩子不愿意参加家庭活动"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_40",
+        "Data": "痛点方向：孩子希望有更多的个人选择"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_41",
+        "Data": "痛点方向：孩子希望有更多的自由支配时间"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_42",
+        "Data": "痛点方向：孩子对父母的教育方式表示不满"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_43",
+        "Data": "痛点方向：孩子希望尝试新的爱好"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_44",
+        "Data": "痛点方向：孩子不想听父母的建议"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_45",
+        "Data": "痛点方向：孩子不愿意接受惩罚"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_46",
+        "Data": "痛点方向：孩子对学校的课程安排不满"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_47",
+        "Data": "痛点方向：孩子不想和父母一起做运动"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_48",
+        "Data": "痛点方向：孩子不想参加亲戚的婚礼"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_49",
+        "Data": "痛点方向：孩子对父母的生活态度感到不满"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_50",
+        "Data": "痛点方向：孩子不愿意和父母分享自己的感受"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_51",
+        "Data": "痛点方向：孩子希望有更多的个人空间"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_52",
+        "Data": "痛点方向：孩子希望追求自己的梦想"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_53",
+        "Data": "痛点方向：孩子不想遵循家庭规则"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_54",
+        "Data": "痛点方向：孩子对父母的态度感到不满"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_55",
+        "Data": "痛点方向：孩子不愿意参加团队活动"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_56",
+        "Data": "痛点方向：孩子对父母的选择表示反对"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_57",
+        "Data": "痛点方向：孩子不想和父母一起度假"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_58",
+        "Data": "痛点方向：孩子希望选择自己的朋友"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_59",
+        "Data": "痛点方向：孩子对父母的期望感到困扰"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_60",
+        "Data": "痛点方向：孩子希望有更多的选择权"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_61",
+        "Data": "痛点方向：孩子不想参加家庭聚餐"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_62",
+        "Data": "痛点方向：孩子对学校的事情不愿意分享"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_63",
+        "Data": "痛点方向：孩子对父母的管教表示不满"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_64",
+        "Data": "痛点方向：孩子希望尝试新的学习方法"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_65",
+        "Data": "痛点方向：孩子不愿意和父母一起做活动"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_66",
+        "Data": "痛点方向：孩子不想和父母一起看电影"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_67",
+        "Data": "痛点方向：孩子对父母的决策表示反对"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_68",
+        "Data": "痛点方向：孩子不想与父母一起做家务"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_69",
+        "Data": "痛点方向：孩子对父母的生活方式感到不适"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_70",
+        "Data": "痛点方向：孩子不愿意遵循父母的道德观"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_71",
+        "Data": "痛点方向：孩子对父母的过度保护感到烦恼"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_72",
+        "Data": "痛点方向：孩子不想参加补习班"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_73",
+        "Data": "痛点方向：孩子希望拥有更多的独立性"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_74",
+        "Data": "痛点方向：孩子对家庭责任感到厌烦"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_75",
+        "Data": "痛点方向：孩子希望选择自己的学习科目"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_76",
+        "Data": "痛点方向：孩子不想接受父母的爱"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_77",
+        "Data": "痛点方向：孩子希望有自己的生活方式"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_78",
+        "Data": "痛点方向：孩子不愿意与父母一起参加活动"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_79",
+        "Data": "痛点方向：孩子希望有更多的社交自由"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_80",
+        "Data": "痛点方向：孩子对父母的教导感到反感"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_81",
+        "Data": "痛点方向：孩子不想参加家庭游戏"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_82",
+        "Data": "痛点方向：孩子希望有更多的个人时间"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_83",
+        "Data": "痛点方向：孩子不想与父母分享心情"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_84",
+        "Data": "痛点方向：孩子不愿意接受父母的教育理念"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_85",
+        "Data": "痛点方向：孩子希望有自己的社交圈"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_86",
+        "Data": "痛点方向：孩子对父母的控制感到愤怒"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_87",
+        "Data": "痛点方向：孩子希望追求自己的兴趣"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_88",
+        "Data": "痛点方向：孩子不想在家待太久"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_89",
+        "Data": "痛点方向：孩子不愿意与父母一起学习"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_90",
+        "Data": "痛点方向：孩子对父母的期待感到压迫"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_91",
+        "Data": "痛点方向：孩子不想接触父母的朋友"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_92",
+        "Data": "痛点方向：孩子希望有更多选择的自由"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_93",
+        "Data": "痛点方向：孩子不想接受父母的管教"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_94",
+        "Data": "痛点方向：孩子希望有自己的想法"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_95",
+        "Data": "痛点方向：孩子不愿意参与家庭决策"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_96",
+        "Data": "痛点方向：孩子对父母的理解感到不足"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_97",
+        "Data": "痛点方向：孩子不想听从父母的意见"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_98",
+        "Data": "痛点方向：孩子希望追求自己的价值观"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_99",
+        "Data": "痛点方向：孩子对父母的管教感到压抑"
+    },
+    {
+        "Xiawei_ID": 7,
+        "Name": "ID_7_Number_100",
+        "Data": "痛点方向：孩子不愿意与父母沟通"
+    }
+]

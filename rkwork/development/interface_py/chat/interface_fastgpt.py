@@ -25,58 +25,29 @@ curl http://127.0.0.1:3000/api/v1/chat/completions \
   
 '''
 
-# # 2 Openai 方式 不可用
-# from openai import OpenAI
-# import httpx
-
-# default_headers={
-#     'Authorization': 'Bearer fastgpt-xX2FbZzgsKIJIVXH1Kng0GtBY89kYXJbRZ2Bre1N1Zh0ajU6jIOW9',
-#     'Content-Type': 'application/json'
-# }
-
-# http_client = httpx.Client(headers= default_headers)
-
-# client = OpenAI(base_url="http://127.0.0.1:3000/api/v1/chat/completions", 
-#                 api_key="fastgpt-xX2FbZzgsKIJIVXH1Kng0GtBY89kYXJbRZ2Bre1N1Zh0ajU6jIOW9",              # 需要在onepai平台中 添加渠道生成令牌
-#                 http_client=http_client
-#             )         
-
-# stream = client.chat.completions.create(
-#     model="glm-4",
-#     messages=[{"role": "user", "content": "实验室预约规则"}],
-#     stream=True,
-    
-# )
-# for chunk in stream:
-#     if chunk.choices[0].delta.content is not None:
-#         print(chunk.choices[0].delta.content, end="")
 
 
-
-import requests   # 可用
+import requests   # 方式二：fastgpt 鉴权方式 可用
 
 url = "http://154.211.13.226:3000/api/v1/chat/completions"
 headers = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer fastgpt-ccmeCIJp1cfdFaB2vbyIDoDrfzHn7tcQFUrErJNb8Owy8AKxlWI8fO"
+    "Authorization": "Bearer fastgpt-ytTG4tyIyBr3XAMqZ7jSywfnTj3u1y1tI45gRrXyKYokXprNnlaq"
 }
 data = {
     "model": "glm-4",
     "messages": [
         {
-            "role": "system",
-            "content": "帮助用户解决问题."
-        },
-        {
             "role": "user",
-            "content": "实验室的预约规则"
+            "content": "第一关第一个"
         }
     ],
-    "stream": True
+    "stream": True,
+    "detail":True
 }
 
 response = requests.post(url, json=data, headers=headers, stream=True)
-
+print(response.text)
 # 打印响应内容
 for line in response.iter_lines(decode_unicode=True):
     if line:
@@ -85,3 +56,18 @@ for line in response.iter_lines(decode_unicode=True):
 
 
 
+# from openai import OpenAI    # 方式三：openai API-KEY 方式
+
+
+
+# client = OpenAI(base_url="http://aiagent-pre.chengwen.net/api/v1", api_key="fastgpt-iZd67F13vcdaco09rqFdp0FMzISEcJGRxtgcsPFSa89NGTySExLFIJ")         # 需要在onepai平台中 添加渠道生成令牌
+
+# stream = client.chat.completions.create(
+#     model="doubao-pro-128k",
+#     messages=[{"role": "user", "content": "写一篇800字的文章，题目为：论当代大学生的社会担当"}],
+#     stream=True,
+    
+# )
+# for chunk in stream:
+#     if chunk.choices[0].delta.content is not None:
+#         print(chunk.choices[0].delta.content, end="")

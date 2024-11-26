@@ -190,6 +190,10 @@ git commit -am 'rk: v1.0.0 两个文件夹: docker compose 快速启动, API接�
 
 >Unable to load connection: MongoServerSelectionError: getaddrinfo EAI_AGAIN mongo
 
+进入Fastgpt容器内部
+
+>docker exec -it fastgpt sh
+
 ## 功能
 
 修改分割下限
@@ -200,3 +204,4 @@ git commit -am 'rk: v1.0.0 两个文件夹: docker compose 快速启动, API接�
 >embeddingChunkSize
 
 /home/rkwork/rkwork/project/FastGPT/projects/app/src/pages/dataset/detail/components/Import/Context.tsx  149
+

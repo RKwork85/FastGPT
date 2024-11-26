@@ -1,0 +1,762 @@
+[
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_1",
+        "Data": "口吻：母亲，关键词:骄傲"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_2",
+        "Data": "口吻：母亲，关键词:失望"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_3",
+        "Data": "口吻：母亲，关键词:心疼"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_4",
+        "Data": "口吻：母亲，关键词:开心"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_5",
+        "Data": "口吻：母亲，关键词:担忧"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_6",
+        "Data": "口吻：母亲，关键词:害怕"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_7",
+        "Data": "口吻：母亲，关键词:难过"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_8",
+        "Data": "口吻：母亲，关键词:担心"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_9",
+        "Data": "口吻：母亲，关键词:焦虑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_10",
+        "Data": "口吻：母亲，关键词:遗憾"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_11",
+        "Data": "口吻：母亲，关键词:疼爱"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_12",
+        "Data": "口吻：母亲，关键词:不满"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_13",
+        "Data": "口吻：母亲，关键词:期望"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_14",
+        "Data": "口吻：母亲，关键词:忧虑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_15",
+        "Data": "口吻：母亲，关键词:生气"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_16",
+        "Data": "口吻：母亲，关键词:郁闷"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_17",
+        "Data": "口吻：母亲，关键词:急躁"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_18",
+        "Data": "口吻：母亲，关键词:焦急"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_19",
+        "Data": "口吻：母亲，关键词:怀疑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_20",
+        "Data": "口吻：母亲，关键词:迷惑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_21",
+        "Data": "口吻：母亲，关键词:慌张"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_22",
+        "Data": "口吻：母亲，关键词:混乱"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_23",
+        "Data": "口吻：母亲，关键词:迷茫"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_24",
+        "Data": "口吻：母亲，关键词:羞愧"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_25",
+        "Data": "口吻：母亲，关键词:内疚"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_26",
+        "Data": "口吻：母亲，关键词:警惕"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_27",
+        "Data": "口吻：母亲，关键词:惋惜"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_28",
+        "Data": "口吻：母亲，关键词:恍惚"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_29",
+        "Data": "口吻：母亲，关键词:疲惫"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_30",
+        "Data": "口吻：母亲，关键词:满足"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_31",
+        "Data": "口吻：母亲，关键词:畏惧"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_32",
+        "Data": "口吻：母亲，关键词:不悦"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_33",
+        "Data": "口吻：母亲，关键词:混乱"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_34",
+        "Data": "口吻：母亲，关键词:惊讶"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_35",
+        "Data": "口吻：母亲，关键词:真诚"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_36",
+        "Data": "口吻：母亲，关键词:严肃"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_37",
+        "Data": "口吻：母亲，关键词:憔悴"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_38",
+        "Data": "口吻：母亲，关键词:憧憬"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_39",
+        "Data": "口吻：爸爸，关键词:骄傲"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_40",
+        "Data": "口吻：爸爸，关键词:失望"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_41",
+        "Data": "口吻：爸爸，关键词:心疼"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_42",
+        "Data": "口吻：爸爸，关键词:开心"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_43",
+        "Data": "口吻：爸爸，关键词:担忧"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_44",
+        "Data": "口吻：爸爸，关键词:害怕"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_45",
+        "Data": "口吻：爸爸，关键词:难过"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_46",
+        "Data": "口吻：爸爸，关键词:担心"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_47",
+        "Data": "口吻：爸爸，关键词:焦虑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_48",
+        "Data": "口吻：爸爸，关键词:遗憾"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_49",
+        "Data": "口吻：爸爸，关键词:疼爱"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_50",
+        "Data": "口吻：爸爸，关键词:不满"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_51",
+        "Data": "口吻：爸爸，关键词:期望"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_52",
+        "Data": "口吻：爸爸，关键词:忧虑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_53",
+        "Data": "口吻：爸爸，关键词:生气"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_54",
+        "Data": "口吻：爸爸，关键词:郁闷"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_55",
+        "Data": "口吻：爸爸，关键词:急躁"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_56",
+        "Data": "口吻：爸爸，关键词:焦急"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_57",
+        "Data": "口吻：爸爸，关键词:怀疑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_58",
+        "Data": "口吻：爸爸，关键词:迷惑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_59",
+        "Data": "口吻：爸爸，关键词:慌张"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_60",
+        "Data": "口吻：爸爸，关键词:混乱"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_61",
+        "Data": "口吻：爸爸，关键词:迷茫"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_62",
+        "Data": "口吻：爸爸，关键词:羞愧"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_63",
+        "Data": "口吻：爸爸，关键词:内疚"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_64",
+        "Data": "口吻：爸爸，关键词:警惕"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_65",
+        "Data": "口吻：爸爸，关键词:惋惜"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_66",
+        "Data": "口吻：爸爸，关键词:恍惚"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_67",
+        "Data": "口吻：爸爸，关键词:疲惫"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_68",
+        "Data": "口吻：爸爸，关键词:满足"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_69",
+        "Data": "口吻：爸爸，关键词:畏惧"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_70",
+        "Data": "口吻：爸爸，关键词:不悦"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_71",
+        "Data": "口吻：爸爸，关键词:混乱"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_72",
+        "Data": "口吻：爸爸，关键词:惊讶"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_73",
+        "Data": "口吻：爸爸，关键词:真诚"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_74",
+        "Data": "口吻：爸爸，关键词:严肃"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_75",
+        "Data": "口吻：爸爸，关键词:憔悴"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_76",
+        "Data": "口吻：爸爸，关键词:憧憬"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_77",
+        "Data": "口吻：妈妈，关键词:骄傲"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_78",
+        "Data": "口吻：妈妈，关键词:失望"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_79",
+        "Data": "口吻：妈妈，关键词:心疼"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_80",
+        "Data": "口吻：妈妈，关键词:开心"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_81",
+        "Data": "口吻：妈妈，关键词:担忧"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_82",
+        "Data": "口吻：妈妈，关键词:害怕"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_83",
+        "Data": "口吻：妈妈，关键词:难过"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_84",
+        "Data": "口吻：妈妈，关键词:担心"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_85",
+        "Data": "口吻：妈妈，关键词:焦虑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_86",
+        "Data": "口吻：妈妈，关键词:遗憾"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_87",
+        "Data": "口吻：妈妈，关键词:疼爱"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_88",
+        "Data": "口吻：妈妈，关键词:不满"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_89",
+        "Data": "口吻：妈妈，关键词:期望"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_90",
+        "Data": "口吻：妈妈，关键词:忧虑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_91",
+        "Data": "口吻：妈妈，关键词:生气"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_92",
+        "Data": "口吻：妈妈，关键词:郁闷"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_93",
+        "Data": "口吻：妈妈，关键词:急躁"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_94",
+        "Data": "口吻：妈妈，关键词:焦急"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_95",
+        "Data": "口吻：妈妈，关键词:怀疑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_96",
+        "Data": "口吻：妈妈，关键词:迷惑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_97",
+        "Data": "口吻：妈妈，关键词:慌张"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_98",
+        "Data": "口吻：妈妈，关键词:混乱"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_99",
+        "Data": "口吻：妈妈，关键词:迷茫"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_100",
+        "Data": "口吻：妈妈，关键词:羞愧"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_101",
+        "Data": "口吻：妈妈，关键词:内疚"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_102",
+        "Data": "口吻：妈妈，关键词:警惕"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_103",
+        "Data": "口吻：妈妈，关键词:惋惜"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_104",
+        "Data": "口吻：妈妈，关键词:恍惚"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_105",
+        "Data": "口吻：妈妈，关键词:疲惫"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_106",
+        "Data": "口吻：妈妈，关键词:满足"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_107",
+        "Data": "口吻：妈妈，关键词:畏惧"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_108",
+        "Data": "口吻：妈妈，关键词:不悦"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_109",
+        "Data": "口吻：妈妈，关键词:混乱"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_110",
+        "Data": "口吻：妈妈，关键词:惊讶"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_111",
+        "Data": "口吻：妈妈，关键词:真诚"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_112",
+        "Data": "口吻：妈妈，关键词:严肃"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_113",
+        "Data": "口吻：妈妈，关键词:憔悴"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_114",
+        "Data": "口吻：妈妈，关键词:憧憬"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_115",
+        "Data": "口吻：父亲，关键词:骄傲"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_116",
+        "Data": "口吻：父亲，关键词:失望"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_117",
+        "Data": "口吻：父亲，关键词:心疼"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_118",
+        "Data": "口吻：父亲，关键词:开心"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_119",
+        "Data": "口吻：父亲，关键词:担忧"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_120",
+        "Data": "口吻：父亲，关键词:害怕"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_121",
+        "Data": "口吻：父亲，关键词:难过"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_122",
+        "Data": "口吻：父亲，关键词:担心"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_123",
+        "Data": "口吻：父亲，关键词:焦虑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_124",
+        "Data": "口吻：父亲，关键词:遗憾"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_125",
+        "Data": "口吻：父亲，关键词:疼爱"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_126",
+        "Data": "口吻：父亲，关键词:不满"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_127",
+        "Data": "口吻：父亲，关键词:期望"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_128",
+        "Data": "口吻：父亲，关键词:忧虑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_129",
+        "Data": "口吻：父亲，关键词:生气"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_130",
+        "Data": "口吻：父亲，关键词:郁闷"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_131",
+        "Data": "口吻：父亲，关键词:急躁"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_132",
+        "Data": "口吻：父亲，关键词:焦急"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_133",
+        "Data": "口吻：父亲，关键词:怀疑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_134",
+        "Data": "口吻：父亲，关键词:迷惑"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_135",
+        "Data": "口吻：父亲，关键词:慌张"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_136",
+        "Data": "口吻：父亲，关键词:混乱"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_137",
+        "Data": "口吻：父亲，关键词:迷茫"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_138",
+        "Data": "口吻：父亲，关键词:羞愧"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_139",
+        "Data": "口吻：父亲，关键词:内疚"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_140",
+        "Data": "口吻：父亲，关键词:警惕"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_141",
+        "Data": "口吻：父亲，关键词:惋惜"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_142",
+        "Data": "口吻：父亲，关键词:恍惚"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_143",
+        "Data": "口吻：父亲，关键词:疲惫"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_144",
+        "Data": "口吻：父亲，关键词:满足"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_145",
+        "Data": "口吻：父亲，关键词:畏惧"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_146",
+        "Data": "口吻：父亲，关键词:不悦"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_147",
+        "Data": "口吻：父亲，关键词:混乱"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_148",
+        "Data": "口吻：父亲，关键词:惊讶"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_149",
+        "Data": "口吻：父亲，关键词:真诚"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_150",
+        "Data": "口吻：父亲，关键词:严肃"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_151",
+        "Data": "口吻：父亲，关键词:憔悴"
+    },
+    {
+        "Xiawei_ID": 6,
+        "Name": "ID_6_Number_152",
+        "Data": "口吻：父亲，关键词:憧憬"
+    }
+]
