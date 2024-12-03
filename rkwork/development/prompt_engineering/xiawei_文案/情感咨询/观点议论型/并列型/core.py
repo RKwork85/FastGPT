@@ -11,7 +11,7 @@ os.chdir(current_path)
 
 # 文件复制重命名
 source_file  = 'daiding.txt'
-rename_file = 'XiaWeiID4'
+rename_file = 'XiaWeiID24'
 numbers = re.findall(r'\d+', rename_file)
 # 将提取的数字列表转换为字符串
 number = ''.join(numbers)

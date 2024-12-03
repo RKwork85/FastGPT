@@ -23,11 +23,11 @@ from openai import OpenAI
 
 
 
-client = OpenAI(base_url="http://127.0.0.1:3001/v1", api_key="sk-3aeP4hpc7OlzUThX870d2817E45f496580Ee465fDc3d34D6")         # 需要在onepai平台中 添加渠道生成令牌
+client = OpenAI(base_url="http://8.134.99.55:3501/v1", api_key="sk-gH9V1HWfWXr0g1CZZpbf8Go7caG8rAph6P6558M3phdTEJEG")         # 需要在onepai平台中 添加渠道生成令牌
 
 stream = client.chat.completions.create(
-    model="glm-4",
-    messages=[{"role": "user", "content": "写一篇800字的文章，题目为：论当代大学生的社会担当"}],
+    model="gpt-4o",
+    messages=[{"role": "user", "content": "你是谁"}],
     stream=True,
     
 )

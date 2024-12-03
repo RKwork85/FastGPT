@@ -1,0 +1,326 @@
+[
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人贫扭头走，猫见主困仍停留。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人困忙避走，鸡见院寒不离守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人窘转身走，鹅见棚陋心依旧。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人寒匆忙走，羊见圈陋伴左右。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人贫快步走，牛见舍陋情依旧。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人困远远走，马见槽空不回头。 （注：这里的“不回头”是指马不会因为食槽空了就离开，与上句的“人见人困远远走”形成对比） "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人艰侧目走，鸽见屋陋终厮守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人窘扭头走，猫见宅陋常留守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人困避着走，鸡见院贫仍驻留。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人寒转身走，鹅见棚陋心依旧。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人贫侧身走，羊见圈陋情长留。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人艰避路走，牛见舍寒心不走。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人困躲着走，驴见户贫不转头。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人窘避行走，兔见窝贫意难走。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人乏远远走，猫见宅贫伴左右。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人贫扭头走，鸡见院陋仍驻留。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人寒匆忙走，鹅见户困终厮守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人困侧身走，羊见圈贫长厮守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人窘避行走，牛见棚贫默相守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人贫快步走，雀见檐贫静相守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人寒躲闪走，驴见舍贫久厮守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人乏远远走，猫见屋贫仍留守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人困扭头走，鸡见院贫常伴守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人艰侧目走，鹅见宅贫坚厮守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人窘侧身走，羊见圈贫默厮守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人贫避路走，牛见棚贫终相守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人寒避道走，雀见檐贫痴相守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人困避行走，兔见窟贫恒厮守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人乏绕路走，猫见屋贫长厮守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人艰避径走，鸡见舍贫坚护守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人窘避途走，鹅见棚贫默伴守。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人贫避道行，羊见圈贫永伴情。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人困绕路行，牛见棚寒痴伴停。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人寒绕路游，雀见巢陋终厮留。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人窘避道溜，猪见圈陋心依旧。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人贫避路行，猫见宅困恒伴情。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人困绕路溜，鸡见舍贫长伴留。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人乏绕路游，鹅见院陋心不休。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人寒避路行，羊见圈简情未更。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    },
+    {
+        "role": "assistant",
+        "content": "人见人窘转身溜，牛见棚破意仍留。 "
+    },
+    {
+        "role": "user",
+        "content": "人见人穷绕道走，狗见家贫死相守。（注意押韵）"
+    }
+]

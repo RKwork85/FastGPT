@@ -2,9 +2,9 @@ import requests
 import json
 
 # 设置请求的URL和Headers
-url = 'http://154.211.13.226:3000/api/v1/chat/completions'
+url = 'https://aiagent-pre.chengwen.net/api/v1/chat/completions'
 headers = {
-    'Authorization': 'Bearer fastgpt-vJx9wyZjv4MZx4U7vv8QNxj85gr4olBUsFVCakl2W0OBHwIKyTE5Rmn0CURP3cbg',
+    'Authorization': 'Bearer fastgpt-nquanT5fQrNml7AGU66qqFREpOa2GeIIGkAC8JXnxaF6qlcLrqVv',
     'Content-Type': 'application/json'
 }
 
@@ -20,7 +20,7 @@ data = {
     "messages": [
          {
             "role": "user",
-            "content": "1"
+            "content": "哲理型文案结构一"
         },
         
     ]
