@@ -29,22 +29,26 @@ curl http://127.0.0.1:3000/api/v1/chat/completions \
 
 import requests   # 方式二：fastgpt 鉴权方式 可用
 
-url = "http://154.211.13.226:3000/api/v1/chat/completions"
+url = "https://api.coze.cn/v3/chat"
 headers = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer fastgpt-ytTG4tyIyBr3XAMqZ7jSywfnTj3u1y1tI45gRrXyKYokXprNnlaq"
+    "Authorization": "Bearer pat_4XTdB1hVaR81KnfbbDGVBdwVKhnkfIbhi0qbg31B1NoNTfMUXx3IYkjfsOax8mFx"
 }
+# uid 1067005087584476
 data = {
-    "model": "glm-4",
-    "messages": [
-        {
-            "role": "user",
-            "content": "第一关第一个"
-        }
-    ],
+    "bot_id": "7449282978746400820",
+    "user_id": "123123",
     "stream": True,
-    "detail":True
+    "auto_save_history":False,
+    "additional_messages":[
+        {
+            "role":"user",
+            "content":"https://www.douyin.com/user/MS4wLjABAAAAWaUsD32XfPjJ0gY7g2hyiFXHkrgu92ZqkvBmW5qZjkZIaXfFxLtFaoqLFf3KOk30?from_tab_name=main&modal_id=7397369982356606271",
+            "content_type":"text"
+        }
+    ]
 }
+
 
 response = requests.post(url, json=data, headers=headers, stream=True)
 print(response.text)
@@ -75,4 +79,3 @@ for line in response.iter_lines(decode_unicode=True):
 #         print(chunk.choices[0].delta.content, end="")
 
 
-pat_4XTdB1hVaR81KnfbbDGVBdwVKhnkfIbhi0qbg31B1NoNTfMUXx3IYkjfsOax8mFx

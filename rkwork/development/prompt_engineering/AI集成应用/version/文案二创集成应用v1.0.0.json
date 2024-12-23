@@ -1,0 +1,2043 @@
+﻿{
+  "nodes": [
+    {
+      "nodeId": "userGuide",
+      "name": "common:core.module.template.system_config",
+      "intro": "common:core.module.template.system_config_info",
+      "avatar": "core/workflow/template/systemConfig",
+      "flowNodeType": "userGuide",
+      "position": {
+        "x": -4112.938696479325,
+        "y": -1051.3589592380827
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "welcomeText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "string",
+          "label": "core.app.Welcome Text",
+          "value": ""
+        },
+        {
+          "key": "variables",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "core.app.Chat Variable",
+          "value": []
+        },
+        {
+          "key": "questionGuide",
+          "valueType": "boolean",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "core.app.Question Guide",
+          "value": false
+        },
+        {
+          "key": "tts",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": {
+            "type": "web"
+          }
+        },
+        {
+          "key": "whisper",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": {
+            "open": false,
+            "autoSend": false,
+            "autoTTSResponse": false
+          }
+        },
+        {
+          "key": "scheduleTrigger",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": null
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "448745",
+      "name": "common:core.module.template.work_start",
+      "intro": "",
+      "avatar": "core/workflow/template/workflowStart",
+      "flowNodeType": "workflowStart",
+      "position": {
+        "x": -2325.208091468044,
+        "y": -1018.1641196302667
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "common:core.module.input.label.user question",
+          "required": true,
+          "toolDescription": "用户问题",
+          "debugLabel": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "userChatInput",
+          "key": "userChatInput",
+          "label": "common:core.module.input.label.user question",
+          "type": "static",
+          "valueType": "string",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "xR8ufeDkU7kX",
+      "name": "用户选择",
+      "intro": "该模块可配置多个选项，以供对话时选择。不同选项可导向不同工作流支线",
+      "avatar": "core/workflow/template/userSelect",
+      "flowNodeType": "userSelect",
+      "position": {
+        "x": 5858.96201124804,
+        "y": -2017.391838947127
+      },
+      "version": "489",
+      "inputs": [
+        {
+          "key": "description",
+          "renderTypeList": [
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "说明文字",
+          "description": "app:workflow.select_description_tip",
+          "placeholder": "app:workflow.select_description_placeholder",
+          "value": "请选择您需要的智能体",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "renderTypeList": [
+            "custom"
+          ],
+          "valueType": "any",
+          "label": "",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": "",
+          "key": "userSelectOptions",
+          "value": [
+            {
+              "value": "一、文案二创助手",
+              "key": "option1"
+            },
+            {
+              "value": "二、文案标题改写助手",
+              "key": "sJyIiasEk0j9"
+            },
+            {
+              "value": "三、文案内容润色助手",
+              "key": "pNMwCyuxG6wQ"
+            },
+            {
+              "value": "四、文案结构分析助手",
+              "key": "p1XpO3idIImO"
+            },
+            {
+              "value": "五、文案钩子改写助手",
+              "key": "uTTDMnhNhBgL"
+            },
+            {
+              "value": "文案评估助手",
+              "key": "lPuezv1Ypv5j"
+            },
+            {
+              "value": "小红书改写助手",
+              "key": "cgfAm3emQR5w"
+            },
+            {
+              "value": "人设类改写助手",
+              "key": "kOmQZ5pc7k3I"
+            },
+            {
+              "value": "更多选题助手",
+              "key": "tmgmXEMPXlEw"
+            },
+            {
+              "value": "私域文案助手",
+              "key": "toR1FGfBW1yI"
+            },
+            {
+              "value": "卖点提炼助手",
+              "key": "cOEuwLkjwY0Q"
+            },
+            {
+              "value": "SEO关键词助手",
+              "key": "sP1mubiNhbqp"
+            },
+            {
+              "value": "潜在人群助手",
+              "key": "jRfgGIPG4bz7"
+            },
+            {
+              "value": "详情页撰写助手",
+              "key": "n0bWiFcvTqJp"
+            },
+            {
+              "value": "评论营销助手",
+              "key": "wZ2hd3CKRC6t"
+            },
+            {
+              "value": "产品取名助手",
+              "key": "ntVS0QfnOnC6"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "selectResult",
+          "key": "selectResult",
+          "required": true,
+          "label": "app:workflow.select_result",
+          "valueType": "string",
+          "type": "static",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "lRun7lSA7r63",
+      "name": "AI 对话",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": 718.2543563242252,
+        "y": -1599.533012999414
+      },
+      "version": "4813",
+      "inputs": [
+        {
+          "key": "model",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "label": "AI 模型",
+          "valueType": "string",
+          "value": "bot-20241212145457-mz2tn",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "temperature",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 0,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 2000,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": true,
+          "valueType": "boolean",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "value": "system",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "boolean",
+          "value": true,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "max": 3000,
+          "valueType": "string",
+          "label": "提示词",
+          "description": "core.app.tip.systemPromptTip",
+          "placeholder": "core.app.tip.chatNodeSystemPromptTip",
+          "value": "",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "workflow:max_dialog_rounds",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "label": "",
+          "debugLabel": "知识库引用",
+          "description": "",
+          "valueType": "datasetQuote",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "fileUrlList",
+          "renderTypeList": [
+            "reference",
+            "input"
+          ],
+          "label": "文件链接",
+          "debugLabel": "文件链接",
+          "valueType": "arrayString",
+          "value": [],
+          "valueDesc": "",
+          "description": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户问题",
+          "required": true,
+          "value": [
+            "448745",
+            "userChatInput"
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "common:core.module.output.label.New context",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": true,
+          "label": "common:core.module.output.label.Ai response content",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static"
+        }
+      ]
+    },
+    {
+      "nodeId": "hAj0uVwAHq7m",
+      "name": "AI 对话#2",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": 4067.7280451242664,
+        "y": -1658.3497827716665
+      },
+      "version": "4813",
+      "inputs": [
+        {
+          "key": "model",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "label": "AI 模型",
+          "valueType": "string",
+          "value": "gpt-4o-mini",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "temperature",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 0,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 8000,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": true,
+          "valueType": "boolean",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "value": "system",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "boolean",
+          "value": true,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "max": 3000,
+          "valueType": "string",
+          "label": "提示词",
+          "description": "core.app.tip.systemPromptTip",
+          "placeholder": "core.app.tip.chatNodeSystemPromptTip",
+          "value": "对输入的文本进行提取，提取的内容，输出格式如下：\nURL链接：\n视频标题：（不做修改）\n视频作者：\n视频ASR文本：(自行添加标点符号)",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "workflow:max_dialog_rounds",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "label": "",
+          "debugLabel": "知识库引用",
+          "description": "",
+          "valueType": "datasetQuote",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "fileUrlList",
+          "renderTypeList": [
+            "reference",
+            "input"
+          ],
+          "label": "文件链接",
+          "debugLabel": "文件链接",
+          "valueType": "arrayString",
+          "value": [],
+          "valueDesc": "",
+          "description": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户问题",
+          "required": true,
+          "value": [
+            "VARIABLE_NODE_ID",
+            "text"
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "common:core.module.output.label.New context",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": true,
+          "label": "common:core.module.output.label.Ai response content",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static"
+        }
+      ]
+    },
+    {
+      "nodeId": "jh7X0Ril9yy9",
+      "name": "变量更新",
+      "intro": "可以更新指定节点的输出值或更新全局变量",
+      "avatar": "core/workflow/template/variableUpdate",
+      "flowNodeType": "variableUpdate",
+      "showStatus": false,
+      "position": {
+        "x": 1690.000559022998,
+        "y": -1311.033012999414
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "updateList",
+          "valueType": "any",
+          "label": "",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": [
+            {
+              "variable": [
+                "VARIABLE_NODE_ID",
+                "text"
+              ],
+              "value": [
+                "",
+                "{{$lRun7lSA7r63.answerText$}}"
+              ],
+              "valueType": "string",
+              "renderType": "input"
+            }
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "bdAIC0Wd7p4a",
+      "name": "判断器",
+      "intro": "根据一定的条件，执行不同的分支。",
+      "avatar": "core/workflow/template/ifelse",
+      "flowNodeType": "ifElseNode",
+      "showStatus": true,
+      "position": {
+        "x": -1367.8520119070854,
+        "y": -1341.6641196302667
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "ifElseList",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "valueType": "any",
+          "label": "",
+          "value": [
+            {
+              "condition": "OR",
+              "list": [
+                {
+                  "variable": [
+                    "448745",
+                    "userChatInput"
+                  ],
+                  "condition": "startWith",
+                  "value": "https:"
+                },
+                {
+                  "variable": [
+                    "448745",
+                    "userChatInput"
+                  ],
+                  "condition": "startWith",
+                  "value": "http"
+                },
+                {
+                  "variable": [
+                    "448745",
+                    "userChatInput"
+                  ],
+                  "condition": "include",
+                  "value": "douyin.com"
+                }
+              ]
+            },
+            {
+              "condition": "OR",
+              "list": [
+                {
+                  "variable": [
+                    "448745",
+                    "userChatInput"
+                  ],
+                  "condition": "equalTo",
+                  "value": "一、文案二创助手"
+                }
+              ]
+            },
+            {
+              "condition": "AND",
+              "list": [
+                {
+                  "variable": [
+                    "448745",
+                    "userChatInput"
+                  ],
+                  "condition": "equalTo",
+                  "value": "二、文案标题改写助手"
+                }
+              ]
+            },
+            {
+              "condition": "AND",
+              "list": [
+                {
+                  "variable": [
+                    "448745",
+                    "userChatInput"
+                  ],
+                  "condition": "equalTo",
+                  "value": "三、文案内容润色助手"
+                }
+              ]
+            },
+            {
+              "condition": "AND",
+              "list": [
+                {
+                  "variable": [
+                    "448745",
+                    "userChatInput"
+                  ],
+                  "condition": "equalTo",
+                  "value": "四、文案结构分析助手"
+                }
+              ]
+            },
+            {
+              "condition": "AND",
+              "list": [
+                {
+                  "variable": [
+                    "448745",
+                    "userChatInput"
+                  ],
+                  "condition": "equalTo",
+                  "value": "五、文案钩子改写助手"
+                }
+              ]
+            }
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ifElseResult",
+          "key": "ifElseResult",
+          "label": "workflow:judgment_result",
+          "valueType": "string",
+          "type": "static",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "naC5A9O0Uu4m",
+      "name": "用户的其他问题",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": 23.83409860127466,
+        "y": 193.59261365099803
+      },
+      "version": "4813",
+      "inputs": [
+        {
+          "key": "model",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "label": "AI 模型",
+          "valueType": "string",
+          "value": "gpt-4o",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "temperature",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 0,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": 2000,
+          "valueType": "number",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "value": true,
+          "valueType": "boolean",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "value": "system",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "string",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "label": "",
+          "valueType": "boolean",
+          "value": true,
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "max": 3000,
+          "valueType": "string",
+          "label": "提示词",
+          "description": "core.app.tip.systemPromptTip",
+          "placeholder": "core.app.tip.chatNodeSystemPromptTip",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "workflow:max_dialog_rounds",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "label": "",
+          "debugLabel": "知识库引用",
+          "description": "",
+          "valueType": "datasetQuote",
+          "valueDesc": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "fileUrlList",
+          "renderTypeList": [
+            "reference",
+            "input"
+          ],
+          "label": "文件链接",
+          "debugLabel": "文件链接",
+          "valueType": "arrayString",
+          "value": [],
+          "valueDesc": "",
+          "description": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户问题",
+          "required": true,
+          "value": "资料：{{$VARIABLE_NODE_ID.data_solved$}}\n{{$448745.userChatInput$}}",
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "selectedTypeIndex": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "common:core.module.output.label.New context",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": true,
+          "label": "common:core.module.output.label.Ai response content",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static"
+        }
+      ]
+    },
+    {
+      "nodeId": "jSnE8DqtRasK",
+      "name": "2 文案标题改写助手",
+      "intro": "",
+      "avatar": "/imgs/app/avatar/simple.svg",
+      "flowNodeType": "appModule",
+      "showStatus": true,
+      "position": {
+        "x": 7360.409257926214,
+        "y": -2361.757834534974
+      },
+      "version": "67616ca2e302b312e87b9028",
+      "inputs": [
+        {
+          "key": "system_forbid_stream",
+          "renderTypeList": [
+            "switch"
+          ],
+          "valueType": "boolean",
+          "label": "禁用流输出",
+          "description": "强制设置嵌套运行的应用，均以非流模式运行",
+          "value": false,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "最多携带多少轮对话记录",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户输入的问题（问题需要完善）",
+          "required": true,
+          "value": [
+            "VARIABLE_NODE_ID",
+            "data"
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "新的上下文",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": false,
+          "label": "AI 回复内容",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static",
+          "valueDesc": ""
+        }
+      ],
+      "pluginId": "67613f48e302b312e87b69df"
+    },
+    {
+      "nodeId": "rY1936MLHqEn",
+      "name": "1文案二创助手",
+      "intro": "",
+      "avatar": "/imgs/app/avatar/simple.svg",
+      "flowNodeType": "appModule",
+      "showStatus": true,
+      "position": {
+        "x": 7360.409257926214,
+        "y": -2971.6465388531997
+      },
+      "version": "67616c70e302b312e87b8e1e",
+      "inputs": [
+        {
+          "key": "system_forbid_stream",
+          "renderTypeList": [
+            "switch"
+          ],
+          "valueType": "boolean",
+          "label": "禁用流输出",
+          "description": "强制设置嵌套运行的应用，均以非流模式运行",
+          "value": false,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "最多携带多少轮对话记录",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户输入的问题（问题需要完善）",
+          "required": true,
+          "value": [
+            "VARIABLE_NODE_ID",
+            "data"
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "新的上下文",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": false,
+          "label": "AI 回复内容",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static",
+          "valueDesc": ""
+        }
+      ],
+      "pluginId": "67613f2ae302b312e87b6922"
+    },
+    {
+      "nodeId": "bCIB507AbPSR",
+      "name": "3 文案内容润色助手",
+      "intro": "润色文案内容",
+      "avatar": "/imgs/app/avatar/simple.svg",
+      "flowNodeType": "appModule",
+      "showStatus": true,
+      "position": {
+        "x": 7360.409257926214,
+        "y": -1738.366059272433
+      },
+      "version": "675ffbb77d11e1159ad2f052",
+      "inputs": [
+        {
+          "key": "system_forbid_stream",
+          "renderTypeList": [
+            "switch"
+          ],
+          "valueType": "boolean",
+          "label": "禁用流输出",
+          "description": "强制设置嵌套运行的应用，均以非流模式运行",
+          "value": false,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "最多携带多少轮对话记录",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户输入的问题（问题需要完善）",
+          "required": true,
+          "value": [
+            "VARIABLE_NODE_ID",
+            "data"
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "新的上下文",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": false,
+          "label": "AI 回复内容",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static",
+          "valueDesc": ""
+        }
+      ],
+      "pluginId": "675c13a4f31e10f10aa6e772"
+    },
+    {
+      "nodeId": "eFWMxjynYnAh",
+      "name": "4 文案结构分析助手",
+      "intro": "分析视频文案",
+      "avatar": "/imgs/app/avatar/simple.svg",
+      "flowNodeType": "appModule",
+      "showStatus": true,
+      "position": {
+        "x": 7360.409257926214,
+        "y": -1021.8918389471271
+      },
+      "version": "675ffe3c7d11e1159ad2f553",
+      "inputs": [
+        {
+          "key": "system_forbid_stream",
+          "renderTypeList": [
+            "switch"
+          ],
+          "valueType": "boolean",
+          "label": "禁用流输出",
+          "description": "强制设置嵌套运行的应用，均以非流模式运行",
+          "value": false,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "最多携带多少轮对话记录",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户输入的问题（问题需要完善）",
+          "required": true,
+          "value": [
+            "VARIABLE_NODE_ID",
+            "data"
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "新的上下文",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": false,
+          "label": "AI 回复内容",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static",
+          "valueDesc": ""
+        }
+      ],
+      "pluginId": "675ffd997d11e1159ad2f426"
+    },
+    {
+      "nodeId": "lh7vEhqyPUr7",
+      "name": "5 文案钩子改写助手",
+      "intro": "",
+      "avatar": "/imgs/app/avatar/simple.svg",
+      "flowNodeType": "appModule",
+      "showStatus": true,
+      "position": {
+        "x": 7360.409257926214,
+        "y": -362.3918389471271
+      },
+      "version": "67614037e302b312e87b6c80",
+      "inputs": [
+        {
+          "key": "system_forbid_stream",
+          "renderTypeList": [
+            "switch"
+          ],
+          "valueType": "boolean",
+          "label": "禁用流输出",
+          "description": "强制设置嵌套运行的应用，均以非流模式运行",
+          "value": false,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "history",
+          "renderTypeList": [
+            "numberInput",
+            "reference"
+          ],
+          "valueType": "chatHistory",
+          "label": "聊天记录",
+          "description": "最多携带多少轮对话记录",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "value": 6,
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "userChatInput",
+          "renderTypeList": [
+            "reference",
+            "textarea"
+          ],
+          "valueType": "string",
+          "label": "用户问题",
+          "toolDescription": "用户输入的问题（问题需要完善）",
+          "required": true,
+          "value": [
+            "VARIABLE_NODE_ID",
+            "data"
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "required": true,
+          "label": "新的上下文",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "type": "static"
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "required": false,
+          "label": "AI 回复内容",
+          "description": "将在 stream 回复完毕后触发",
+          "valueType": "string",
+          "type": "static",
+          "valueDesc": ""
+        }
+      ],
+      "pluginId": "67613f60e302b312e87b6a81"
+    },
+    {
+      "nodeId": "pAER6qbDfIzX",
+      "name": "变量更新#2",
+      "intro": "可以更新指定节点的输出值或更新全局变量",
+      "avatar": "core/workflow/template/variableUpdate",
+      "flowNodeType": "variableUpdate",
+      "showStatus": false,
+      "position": {
+        "x": 8739.199846671081,
+        "y": -2873.1465388531997
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "updateList",
+          "valueType": "any",
+          "label": "",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": [
+            {
+              "variable": [
+                "VARIABLE_NODE_ID",
+                "data_solved"
+              ],
+              "value": [
+                "",
+                "{{$rY1936MLHqEn.answerText$}}"
+              ],
+              "valueType": "any",
+              "renderType": "input"
+            }
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "w7gqP6aGK7w9",
+      "name": "变量更新#3",
+      "intro": "可以更新指定节点的输出值或更新全局变量",
+      "avatar": "core/workflow/template/variableUpdate",
+      "flowNodeType": "variableUpdate",
+      "showStatus": false,
+      "position": {
+        "x": 8739.199846671081,
+        "y": -1627.366059272433
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "updateList",
+          "valueType": "any",
+          "label": "",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": [
+            {
+              "variable": [
+                "VARIABLE_NODE_ID",
+                "data_solved"
+              ],
+              "value": [
+                "",
+                "{{$bCIB507AbPSR.answerText$}}"
+              ],
+              "valueType": "any",
+              "renderType": "input"
+            }
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "sJbPFs29Kdn4",
+      "name": "变量更新#4",
+      "intro": "可以更新指定节点的输出值或更新全局变量",
+      "avatar": "core/workflow/template/variableUpdate",
+      "flowNodeType": "variableUpdate",
+      "showStatus": false,
+      "position": {
+        "x": 8739.199846671081,
+        "y": -2263.257834534974
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "updateList",
+          "valueType": "any",
+          "label": "",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": [
+            {
+              "variable": [
+                "VARIABLE_NODE_ID",
+                "data_solved"
+              ],
+              "value": [
+                "",
+                "{{$jSnE8DqtRasK.answerText$}}"
+              ],
+              "valueType": "any",
+              "renderType": "input"
+            }
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "euVa3YER11EG",
+      "name": "变量更新#5",
+      "intro": "可以更新指定节点的输出值或更新全局变量",
+      "avatar": "core/workflow/template/variableUpdate",
+      "flowNodeType": "variableUpdate",
+      "showStatus": false,
+      "position": {
+        "x": 8739.199846671081,
+        "y": -910.8918389471271
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "updateList",
+          "valueType": "any",
+          "label": "",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": [
+            {
+              "variable": [
+                "VARIABLE_NODE_ID",
+                "data_solved"
+              ],
+              "value": [
+                "",
+                "{{$eFWMxjynYnAh.answerText$}}"
+              ],
+              "valueType": "any",
+              "renderType": "input"
+            }
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "jSeRbU1DDWbb",
+      "name": "变量更新#6",
+      "intro": "可以更新指定节点的输出值或更新全局变量",
+      "avatar": "core/workflow/template/variableUpdate",
+      "flowNodeType": "variableUpdate",
+      "showStatus": false,
+      "position": {
+        "x": 8739.199846671081,
+        "y": -263.8918389471271
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "updateList",
+          "valueType": "any",
+          "label": "",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": [
+            {
+              "variable": [
+                "VARIABLE_NODE_ID",
+                "data_solved"
+              ],
+              "value": [
+                "",
+                "{{$lh7vEhqyPUr7.answerText$}}"
+              ],
+              "valueType": "any",
+              "renderType": "input"
+            }
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "wT2M5g39E2ii",
+      "name": "变量更新#7",
+      "intro": "可以更新指定节点的输出值或更新全局变量",
+      "avatar": "core/workflow/template/variableUpdate",
+      "flowNodeType": "variableUpdate",
+      "showStatus": false,
+      "position": {
+        "x": 5030.7498945729785,
+        "y": -1357.891838947127
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "updateList",
+          "valueType": "any",
+          "label": "",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": [
+            {
+              "variable": [
+                "VARIABLE_NODE_ID",
+                "data"
+              ],
+              "value": [
+                "",
+                "{{$hAj0uVwAHq7m.answerText$}}"
+              ],
+              "valueType": "string",
+              "renderType": "input"
+            }
+          ],
+          "valueDesc": "",
+          "description": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "gf1J02uvpiIa",
+      "name": "指定回复",
+      "intro": "该模块可以直接回复一段指定的内容。常用于引导、提示。非字符串内容传入时，会转成字符串进行输出。",
+      "avatar": "core/workflow/template/reply",
+      "flowNodeType": "answerNode",
+      "position": {
+        "x": -271.9358251321223,
+        "y": -1273.033012999414
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "text",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "valueType": "any",
+          "required": true,
+          "label": "回复的内容",
+          "description": "common:core.module.input.description.Response content",
+          "placeholder": "common:core.module.input.description.Response content",
+          "value": "\n正在为您分析视频链接，请稍候...🌟\n\n",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "qszb8VW7xlBq",
+      "name": "指定回复#2",
+      "intro": "该模块可以直接回复一段指定的内容。常用于引导、提示。非字符串内容传入时，会转成字符串进行输出。",
+      "avatar": "core/workflow/template/reply",
+      "flowNodeType": "answerNode",
+      "position": {
+        "x": 2734.23796664853,
+        "y": -1311.033012999414
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "text",
+          "renderTypeList": [
+            "textarea",
+            "reference"
+          ],
+          "valueType": "any",
+          "required": true,
+          "label": "回复的内容",
+          "description": "common:core.module.input.description.Response content",
+          "placeholder": "common:core.module.input.description.Response content",
+          "value": "\n正在为您整理资料，请稍候...🌟\n\n",
+          "valueDesc": "",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "lRun7lSA7r63",
+      "target": "jh7X0Ril9yy9",
+      "sourceHandle": "lRun7lSA7r63-source-right",
+      "targetHandle": "jh7X0Ril9yy9-target-left"
+    },
+    {
+      "source": "bdAIC0Wd7p4a",
+      "target": "naC5A9O0Uu4m",
+      "sourceHandle": "bdAIC0Wd7p4a-source-ELSE",
+      "targetHandle": "naC5A9O0Uu4m-target-left"
+    },
+    {
+      "source": "xR8ufeDkU7kX",
+      "target": "rY1936MLHqEn",
+      "sourceHandle": "xR8ufeDkU7kX-source-option1",
+      "targetHandle": "rY1936MLHqEn-target-left"
+    },
+    {
+      "source": "xR8ufeDkU7kX",
+      "target": "jSnE8DqtRasK",
+      "sourceHandle": "xR8ufeDkU7kX-source-sJyIiasEk0j9",
+      "targetHandle": "jSnE8DqtRasK-target-left"
+    },
+    {
+      "source": "xR8ufeDkU7kX",
+      "target": "bCIB507AbPSR",
+      "sourceHandle": "xR8ufeDkU7kX-source-pNMwCyuxG6wQ",
+      "targetHandle": "bCIB507AbPSR-target-left"
+    },
+    {
+      "source": "xR8ufeDkU7kX",
+      "target": "eFWMxjynYnAh",
+      "sourceHandle": "xR8ufeDkU7kX-source-p1XpO3idIImO",
+      "targetHandle": "eFWMxjynYnAh-target-left"
+    },
+    {
+      "source": "xR8ufeDkU7kX",
+      "target": "lh7vEhqyPUr7",
+      "sourceHandle": "xR8ufeDkU7kX-source-uTTDMnhNhBgL",
+      "targetHandle": "lh7vEhqyPUr7-target-left"
+    },
+    {
+      "source": "bdAIC0Wd7p4a",
+      "target": "rY1936MLHqEn",
+      "sourceHandle": "bdAIC0Wd7p4a-source-ELSE IF 1",
+      "targetHandle": "rY1936MLHqEn-target-left"
+    },
+    {
+      "source": "bdAIC0Wd7p4a",
+      "target": "jSnE8DqtRasK",
+      "sourceHandle": "bdAIC0Wd7p4a-source-ELSE IF 2",
+      "targetHandle": "jSnE8DqtRasK-target-left"
+    },
+    {
+      "source": "bdAIC0Wd7p4a",
+      "target": "bCIB507AbPSR",
+      "sourceHandle": "bdAIC0Wd7p4a-source-ELSE IF 3",
+      "targetHandle": "bCIB507AbPSR-target-left"
+    },
+    {
+      "source": "bdAIC0Wd7p4a",
+      "target": "eFWMxjynYnAh",
+      "sourceHandle": "bdAIC0Wd7p4a-source-ELSE IF 4",
+      "targetHandle": "eFWMxjynYnAh-target-left"
+    },
+    {
+      "source": "bdAIC0Wd7p4a",
+      "target": "lh7vEhqyPUr7",
+      "sourceHandle": "bdAIC0Wd7p4a-source-ELSE IF 5",
+      "targetHandle": "lh7vEhqyPUr7-target-left"
+    },
+    {
+      "source": "448745",
+      "target": "bdAIC0Wd7p4a",
+      "sourceHandle": "448745-source-right",
+      "targetHandle": "bdAIC0Wd7p4a-target-left"
+    },
+    {
+      "source": "rY1936MLHqEn",
+      "target": "pAER6qbDfIzX",
+      "sourceHandle": "rY1936MLHqEn-source-right",
+      "targetHandle": "pAER6qbDfIzX-target-left"
+    },
+    {
+      "source": "jSnE8DqtRasK",
+      "target": "sJbPFs29Kdn4",
+      "sourceHandle": "jSnE8DqtRasK-source-right",
+      "targetHandle": "sJbPFs29Kdn4-target-left"
+    },
+    {
+      "source": "bCIB507AbPSR",
+      "target": "w7gqP6aGK7w9",
+      "sourceHandle": "bCIB507AbPSR-source-right",
+      "targetHandle": "w7gqP6aGK7w9-target-left"
+    },
+    {
+      "source": "eFWMxjynYnAh",
+      "target": "euVa3YER11EG",
+      "sourceHandle": "eFWMxjynYnAh-source-right",
+      "targetHandle": "euVa3YER11EG-target-left"
+    },
+    {
+      "source": "lh7vEhqyPUr7",
+      "target": "jSeRbU1DDWbb",
+      "sourceHandle": "lh7vEhqyPUr7-source-right",
+      "targetHandle": "jSeRbU1DDWbb-target-left"
+    },
+    {
+      "source": "hAj0uVwAHq7m",
+      "target": "wT2M5g39E2ii",
+      "sourceHandle": "hAj0uVwAHq7m-source-right",
+      "targetHandle": "wT2M5g39E2ii-target-left"
+    },
+    {
+      "source": "wT2M5g39E2ii",
+      "target": "xR8ufeDkU7kX",
+      "sourceHandle": "wT2M5g39E2ii-source-right",
+      "targetHandle": "xR8ufeDkU7kX-target-left"
+    },
+    {
+      "source": "bdAIC0Wd7p4a",
+      "target": "gf1J02uvpiIa",
+      "sourceHandle": "bdAIC0Wd7p4a-source-IF",
+      "targetHandle": "gf1J02uvpiIa-target-left"
+    },
+    {
+      "source": "gf1J02uvpiIa",
+      "target": "lRun7lSA7r63",
+      "sourceHandle": "gf1J02uvpiIa-source-right",
+      "targetHandle": "lRun7lSA7r63-target-left"
+    },
+    {
+      "source": "jh7X0Ril9yy9",
+      "target": "qszb8VW7xlBq",
+      "sourceHandle": "jh7X0Ril9yy9-source-right",
+      "targetHandle": "qszb8VW7xlBq-target-left"
+    },
+    {
+      "source": "qszb8VW7xlBq",
+      "target": "hAj0uVwAHq7m",
+      "sourceHandle": "qszb8VW7xlBq-source-right",
+      "targetHandle": "hAj0uVwAHq7m-target-left"
+    }
+  ],
+  "chatConfig": {
+    "welcomeText": "🌟🚀 各位朋友们，大家好！👋🎉\n\n欢迎来到文案二创集成应用，这里是创意与灵感的聚集地，也是文字魔法的施展场！📝✨\n\n🎨 想要让你的文案焕发新生吗？我们有文案润色功能，让每一句话都闪耀着智慧的光芒。🌈\n\n🏷️ 需要一个吸引人的标题？我们的标题改写功能，让你的文案一跃成为焦点，抓住每一个眼球。👀\n\n🔍 对文案结构感到迷茫？我们的结构分析功能，帮你梳理思路，构建完美的文案框架。🏰\n\n🔄 想要给文案注入新鲜血液？我们的文案二创功能，让你的创意无限放大，创造出独一无二的内容。🌟\n\n🎣 最后，别忘了我们的文案钩子功能，让你的文案像鱼钩一样，牢牢钩住读者的心。💘\n\n现在，就让我们一起开启这段文字的奇幻之旅吧！🚀💫 准备好了吗？让我们开始创作吧！📖💥",
+    "variables": [
+      {
+        "id": "27admq",
+        "key": "text",
+        "label": "text",
+        "type": "input",
+        "description": "",
+        "required": false,
+        "valueType": "string",
+        "list": [
+          {
+            "value": "",
+            "label": ""
+          }
+        ],
+        "defaultValue": "",
+        "enums": [
+          {
+            "value": "",
+            "label": ""
+          }
+        ]
+      },
+      {
+        "id": "cjia2x",
+        "key": "data_solved",
+        "label": "data_solved",
+        "type": "input",
+        "description": "",
+        "required": false,
+        "valueType": "string",
+        "list": [
+          {
+            "value": "",
+            "label": ""
+          }
+        ],
+        "defaultValue": "",
+        "enums": [
+          {
+            "value": "",
+            "label": ""
+          }
+        ],
+        "icon": "core/workflow/inputType/input"
+      },
+      {
+        "id": "vmd3cb",
+        "key": "data",
+        "label": "data",
+        "type": "input",
+        "description": "",
+        "required": false,
+        "valueType": "string",
+        "list": [
+          {
+            "value": "",
+            "label": ""
+          }
+        ],
+        "defaultValue": "",
+        "enums": [
+          {
+            "value": "",
+            "label": ""
+          }
+        ],
+        "icon": "core/workflow/inputType/input"
+      },
+      {
+        "id": "m2v8o7",
+        "key": "history",
+        "label": "history",
+        "type": "input",
+        "description": "",
+        "required": false,
+        "valueType": "string",
+        "list": [
+          {
+            "value": "",
+            "label": ""
+          }
+        ],
+        "defaultValue": "",
+        "enums": [
+          {
+            "value": "",
+            "label": ""
+          }
+        ]
+      }
+    ],
+    "scheduledTriggerConfig": {
+      "cronString": "",
+      "timezone": "Asia/Shanghai",
+      "defaultPrompt": ""
+    },
+    "_id": "67613d81e302b312e87b6633"
+  }
+}
