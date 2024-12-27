@@ -76,3 +76,25 @@ if response.status_code == 200:
 # rkwork@rkwork:~/rkwork/project/FastGPT$ /home/rkwork/miniconda3/bin/python /home/rkwork/rkwork/project/FastGPT/rkwork/development/interface_py/chat/jiaohu.py
 
 # Response Data: {'responseData': [{'id': 'jolL4GdZFI2D', 'nodeId': 'vm6dwxVI41aH', 'moduleName': '用户选择', 'moduleType': 'userSelect', 'runningTime': 0.01, 'userSelectResult': '2'}], 'newVariables': {'userId': '66e0fc19b5ea3fdd326f34fe', 'uid': 'asdfadsfasfd2323', 'name': '张三'}, 'id': 'abcd', 'model': '', 'usage': {'prompt_tokens': 1, 'completion_tokens': 1, 'total_tokens': 1}, 'choices': [{'message': {'role': 'assistant', 'content': ''}, 'finish_reason': 'stop', 'index': 0}]}
+
+import re
+import json
+
+# 提供的字符串
+text = '\n{"URL":"https://www.douyin.com/video/123456789","TITLE":"小夜灯使用介绍","AUTHOR":"雷军","COPYWRITER":"这是一条来自抖音的视频视频中雷军展示了一款小夜灯并介绍了其使用方法和优点他将小夜灯装在床头柜前晚上起夜时会自动亮起无需开大灯非常方便此外还可以将小夜灯贴在衣柜里或洗手间里使用起来更加便捷雷军认为这款小夜灯非常实用家里可以多买几个贴在需要的地方"}\''
+
+# 使用正则表达式提取JSON数据
+json_pattern = r'\{.*?\}'
+json_match = re.search(json_pattern, text, re.DOTALL)
+
+if json_match:
+    json_data_str = json_match.group(0)
+    try:
+        # 将提取的JSON字符串解析为Python字典
+        extracted_json = json.loads(json_data_str)
+        print("提取的JSON数据：")
+        print(json.dumps(extracted_json, indent=4, ensure_ascii=False), type(extracted_json))
+    except json.JSONDecodeError as e:
+        print(f"解析JSON时出错：{e}")
+else:
+    print("未找到匹配的JSON数据")

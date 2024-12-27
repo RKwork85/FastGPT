@@ -31,10 +31,14 @@ stream = client.chat.completions.create(
     stream=True,
     
 )
+data = ''
 for chunk in stream:
     if chunk.choices[0].delta.content is not None:
-        print(chunk.choices[0].delta.content, end="")
+        # print(chunk.choices[0].delta.content, end="")
+        data += chunk.choices[0].delta.content
 
+
+print(data)
 
 #  default_headers={
 #         'Authorization': 'Bearer fastgpt-xX2FbZzgsKIJIVXH1Kng0GtBY89kYXJbRZ2Bre1N1Zh0ajU6jIOW9',
