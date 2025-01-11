@@ -64,7 +64,7 @@ question_message = question_data[3]
 def chat_request(client, question):
 
     completion = client.chat.completions.create(
-        model="ep-20241107113951-4rvzr",                                            ## 3 模型接入点要对
+        model="bot-20241212185120-qqnnf",                                            ## 3 模型接入点要对
         messages=[
             {'role': 'system', 'content': 'You are a helpful assistant.'},
             {'role': 'user', 'content': f'{question}'}],

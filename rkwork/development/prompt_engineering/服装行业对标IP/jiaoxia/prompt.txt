@@ -1,0 +1,165 @@
+用户会给到一个视频标题，请根据标题内容按照匹配对应的分类，七大分类及每个分类的参考如下：
+
+日常话题
+#ootd穿搭
+#穿搭
+#氛围感
+
+风格话题
+
+#谁穿谁好看
+#多巴胺女孩穿搭 #秋冬新款
+
+好物话题
+
+#秋冬新款
+#早秋新款
+#她家衣服真好看质量好还不贵
+
+场景话题
+#秋冬穿搭
+#五一出游穿搭 
+#街拍
+
+个性话题
+# 微胖女生
+# 显瘦穿搭
+#穿出自己的风格
+
+功能话题
+# 面料柔软舒适
+# 加绒保暖
+#舒适透气又凉快 
+
+品牌/店铺/达人话题
+#爆款热卖中 
+#抖音618好物节
+
+输出json格式：{"话题分类"："分类结果"}
+提示：若分类结果有多个请将值的格式按照"分类结果一；分类结果二..."输出
+
+
+播放量：1152.1亿次#抖音好物年货节
+
+播放量：1354.1亿次
+
+算0401/25/1800
+
+
+
+
+
+为你获取到视频的相关信息如下：
+- 标题：今年过年怎么穿，当然是怎么好看怎么来#晒出我的新年穿搭 #新年穿搭红红火火
+- 作者：VFU运动旗舰店
+- 视频ASR文本：今年过年穿什么着大叔是百搭还好看内搭一件粉色系修身外套锁温保暖在室内单穿也能美美的裤子内里加绒但一点也不会臃肿还能修饰腿型深灰色系也超级百搭再加点红色元素点缀真的是过年百搭不挑人的一套
+- 视频或图片OCR文本：|什么
+**标题：** 今年过年怎么穿，当然是怎么好看怎么来#晒出我的新年穿搭 #新年穿搭红红火火
+**作者：** VFU运动旗舰店
+**视频ASR文本：** 今年过年穿什么着大叔是百搭还好看内搭一件粉色系修身外套锁温保暖在室内单穿也能美美的裤子内里加绒但一点也不会臃肿还能修饰腿型深灰色系也超级百搭再加点红色元素点缀真的是过年百搭不挑人的一套
+**视频或图片OCR文本：** |什么
+
+**视频地址：** https://www.douyin.com/user/MS4wLjABAAAAuTCMyYpMo9anZCvjozBPh6d1gCz8_KjHal9oN9dy92n53JfnAsvIrpBo2cqd8-KQ?from_tab_name=main&modal_id=7452575275113565475
+**视频标题：** 
+
+
+http://192.168.1.235:6001/tools/markdown2excel
+
+{
+  "filter": {},
+  "columns": [ ],
+  "table_start":0,
+  "markdown_base64":"{{$lXq0RuBmgyLB.y6EW50oK0oUw$}}",
+  "markdown": ""
+}
+
+
+{
+  "data1": "{\"result\":[{\"ID\":1,\"对标账号\":\"杭州赫菲弥服饰\",\"抖音主页链接\":\"https://v.douyin.com/iUSNne4L/\",\"账号性别\":\"女\",\"账号年龄\":\"30-40\",\"账号核心形象\":\"品牌创始人,主理人,KOL\",\"账号时间\":\"2018-2024\",\"粉丝量\":\"3.2W\",\"服装类别\":\"女装\",\"服装类型\":\"日常装,休闲装,职场装\",\"服装风格\":\"时尚风,高街风,简约风\",\"内容形式\":\"vlog\",\"行业\":\"零售\",\"目标人群\":\"TO C\",\"受众地域\":\"一线城市,二线城市\",\"受众年龄\":\"青少年,青年\",\"创业时间\":\"6 年\",\"发展方向\":\"品牌,个人\",\"线下门店\":\"有\",\"品牌定位\":\"中档,经济型\",\"变现途径\":\"电商带货,产品销售,合作推广\",\"账号类型\":\"品牌创始人 IP 日常,穿搭分享,知识分享\"},{\"ID\":2,\"对标账号\":\"七叔女装供应链\",\"抖音主页链接\":\"https://v.douyin.com/iUdVTT2e/\",\"账号性别\":\"男\",\"账号年龄\":\"40-50\",\"账号核心形象\":\"主理人\",\"账号时间\":\"2019-2024\",\"粉丝量\":\"30.6W\",\"服装类别\":\"男装,女装\",\"服装类型\":\"日常装,休闲装,职场装\",\"服装风格\":\"原创风,小众风\",\"内容形式\":\"口播\",\"行业\":\"供应链\",\"目标人群\":\"TO B,TO C\",\"受众地域\":\"国内市场\",\"受众年龄\":\"中年\",\"创业时间\":null,\"发展方向\":\"个人\",\"线下门店\":\"有\",\"品牌定位\":null,\"变现途径\":\"电商带货,产品销售\",\"账号类型\":\"品牌创始人 IP 日常,知识分享,经验分享\"},{\"ID\":3,\"对标账号\":\"鳗鱼大姐讲服装\",\"抖音主页链接\":\"https://v.douyin.com/iUdVTwwJ/\",\"账号性别\":\"女\",\"账号年龄\":\"20-30\",\"账号核心形象\":\"品牌创始人\",\"账号时间\":\"2023-2024\",\"粉丝量\":\"16.2W\",\"服装类别\":\"女装\",\"服装类型\":\",休闲装\",\"服装风格\":\"时尚风,\",\"内容形式\":\"采访\",\"行业\":null,\"目标人群\":\"TO C\",\"受众地域\":\"一线城市,二线城市\",\"受众年龄\":\"青年,中年\",\"创业时间\":\"17 年\",\"发展方向\":\"品牌,个人\",\"线下门店\":\"有\",\"品牌定位\":\"高端,中档,经济型\",\"变现途径\":\"咨询服务,合作推广\",\"账号类型\":\"知识分享,经验分享\"}]}"
+}
+
+
+{
+  "data1": "| 文案 ID       | 生成文案                                                                                 |\n|----------------|------------------------------------------------------------------------------------------|\n| 改写文案一     | 在寒风中，有谁能拒绝一件温暖舒适的“座山雕”呢？                                                  |\n| 改写文案二     | 这件针织外套带来柔软的触感，轻松穿出冬季的风格与气氛，是搭配的好选择。                            |\n| 改写文案三     | 内层选用高密度的貉子毛，保暖效果卓越，让你在冬季时刻保持温暖，同时触感柔软，对舒适度大大加分。     |\n| 改写文案四     | 黑色与灰色的经典配色，无论是打造冬日氛围，还是展现个性气质，都能轻而易举地做到。                  |"
+}
+
+{
+  "result": "| ID | 对标账号 | 抖音主页链接 | 账号性别 | 账号年龄 | 账号核心形象 | 账号时间 | 粉丝量 | 服装类别 | 服装类型 | 服装风格 | 内容形式 | 行业 | 目标人群 | 受众地域 | 受众年龄 | 创业时间 | 发展方向 | 线下门店 | 品牌定位 | 变现途径 | 账号类型 |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n|1|杭州赫菲弥服饰|https://v.douyin.com/iUSNne4L/|女|30-40|品牌创始人,主理人,KOL|2018-2024|3.2W|女装|日常装,休闲装,职场装|时尚风,高街风,简约风|vlog|零售|TO C|一线城市,二线城市|青少年,青年|6 年|品牌,个人|有|中档,经济型|电商带货,产品销售,合作推广|品牌创始人 IP 日常,穿搭分享,知识分享\n|2|七叔女装供应链|https://v.douyin.com/iUdVTT2e/|男|40-50|主理人|2019-2024|30.6W|男装,女装|日常装,休闲装,职场装|原创风,小众风|口播|供应链|TO B,TO C|国内市场|中年|null|个人|有|null|电商带货,产品销售|品牌创始人 IP 日常,知识分享,经验分享\n|3|鳗鱼大姐讲服装|https://v.douyin.com/iUdVTwwJ/|女|20-30|品牌创始人|2023-2024|16.2W|女装|,休闲装|时尚风,|采访|null|TO C|一线城市,二线城市|青年,中年|17 年|品牌,个人|有|高端,中档,经济型|咨询服务,合作推广|知识分享,经验分享",
+  "result2base64": "fCBJRCB8IOWvueagh+i0puWPtyB8IOaKlumfs+S4u+mhtemTvuaOpSB8IOi0puWPt+aAp+WIqyB8IOi0puWPt+W5tOm+hCB8IOi0puWPt+aguOW/g+W9ouixoSB8IOi0puWPt+aXtumXtCB8IOeyieS4nemHjyB8IOacjeijheexu+WIqyB8IOacjeijheexu+WeiyB8IOacjeijhemjjuagvCB8IOWGheWuueW9ouW8jyB8IOihjOS4miB8IOebruagh+S6uue+pCB8IOWPl+S8l+WcsOWfnyB8IOWPl+S8l+W5tOm+hCB8IOWIm+S4muaXtumXtCB8IOWPkeWxleaWueWQkSB8IOe6v+S4i+mXqOW6lyB8IOWTgeeJjOWumuS9jSB8IOWPmOeOsOmAlOW+hCB8IOi0puWPt+exu+WeiyB8CnwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwgLS0tIHwKfDF85p2t5bee6LWr6I+y5byl5pyN6aWwfGh0dHBzOi8vdi5kb3V5aW4uY29tL2lVU05uZTRML3zlpbN8MzAtNDB85ZOB54mM5Yib5aeL5Lq6LOS4u+eQhuS6uixLT0x8MjAxOC0yMDI0fDMuMld85aWz6KOFfOaXpeW4uOijhSzkvJHpl7Loo4Us6IGM5Zy66KOFfOaXtuWwmumjjizpq5jooZfpo44s566A57qm6aOOfHZsb2d86Zu25ZSufFRPIEN85LiA57q/5Z+O5biCLOS6jOe6v+WfjuW4gnzpnZLlsJHlubQs6Z2S5bm0fDblubR85ZOB54mMLOS4quS6unzmnIl85Lit5qGjLOe7j+a1juWei3znlLXllYbluKbotKcs5Lqn5ZOB6ZSA5ZSuLOWQiOS9nOaOqOW5v3zlk4HniYzliJvlp4vkurpJUOaXpeW4uCznqb/mkK3liIbkuqss55+l6K+G5YiG5LqrCnwyfOS4g+WPlOWls+ijheS+m+W6lOmTvnxodHRwczovL3YuZG91eWluLmNvbS9pVWRWVFQyZS9855S3fDQwLTUwfOS4u+eQhuS6unwyMDE5LTIwMjR8MzAuNld855S36KOFLOWls+ijhXzml6XluLjoo4Us5LyR6Zey6KOFLOiBjOWcuuijhXzljp/liJvpo44s5bCP5LyX6aOOfOWPo+aSrXzkvpvlupTpk758VE8gQixUTyBDfOWbveWGheW4guWcunzkuK3lubR8bnVsbHzkuKrkurp85pyJfG51bGx855S15ZWG5bim6LSnLOS6p+WTgemUgOWUrnzlk4HniYzliJvlp4vkurpJUOaXpeW4uCznn6Xor4bliIbkuqss57uP6aqM5YiG5LqrCnwzfOmzl+mxvOWkp+WnkOiusuacjeijhXxodHRwczovL3YuZG91eWluLmNvbS9pVWRWVHd3Si985aWzfDIwLTMwfOWTgeeJjOWIm+Wni+S6unwyMDIzLTIwMjR8MTYuMld85aWz6KOFfCzkvJHpl7Loo4V85pe25bCa6aOOLHzph4forr98bnVsbHxUTyBDfOS4gOe6v+WfjuW4gizkuoznur/ln47luIJ86Z2S5bm0LOS4reW5tHwxN+W5tHzlk4HniYws5Liq5Lq6fOaciXzpq5jnq68s5Lit5qGjLOe7j+a1juWei3zlkqjor6LmnI3liqEs5ZCI5L2c5o6o5bm/fOefpeivhuWIhuS6qyznu4/pqozliIbkuqs="
+}
+
+'| 文案ID       | 生成文案                                                                                 |
+|----------------|------------------------------------------------------------------------------------------|
+| 改写文案一     | 在寒风中，有谁能拒绝一件温暖舒适的“座山雕”呢？                                                  |
+| 改写文案二     | 这件针织外套带来柔软的触感，轻松穿出冬季的风格与气氛，是搭配的好选择。                            |
+| 改写文案三     | 内层选用高密度的貉子毛，保暖效果卓越，让你在冬季时刻保持温暖，同时触感柔软，对舒适度大大加分。     |
+| 改写文案四     | 黑色与灰色的经典配色，无论是打造冬日氛围，还是展现个性气质，都能轻而易举地做到。                  |'
+
+
+
+
+
+根据给到的产品信息，生成文案，语言风格，行文逻辑参照示例，产品信息中没有的不可以随意发挥：
+文案参考如下
+我严重怀疑只有他们家的内裤是女性设计师设计的。不信你们去检查一下自己的内裤，现在的黑心商家，他底档只做一半，卡的难受就不说了，但凡有点什么分泌物啊，都会卡在这个缝合线上。你多洗几次，又得换新的。终于让我找到这种加长底档的内裤，而且不是这个价格啊。你看，现在整整八条，到手才多少钱？你知道它穿起来有多舒服吗？整条用的都是 80 支新疆长绒棉，光摸着就是软软糯糯的，特别舒服。这种吸湿排汗的面料对我们女生就很友好。就别家内裤底档还在卷什么 3A 、5A，它直接整条都是 7A 抑菌棉。他家的内裤买回来都不用洗一次再穿，直接就是开封即穿。腰和大腿根这里都做了加宽无痕，肚子上、腿上有肉肉的姐妹她也不会磨。全包裹设计就不会说走两步就夹屁屁，弹力也很好，甭管你怎么扯，它都是一秒回弹。它这个面料就是水洗 150 次也不会说发黄变硬，但是我们女生的内裤还是得三个月一换，你相信我。穿来穿去还是这种全棉的最舒服。趁现在有活动，这个价格到手八条还是很好看的马卡龙色系，真的比一次性的还划算。你穿它一次，根本看不上别的内裤了。
+
+
+以下是一篇文案模板，根据用户输入的信息，套用进去，用词要接地气，常用词，灵活一些：
+文案模板如下
+懒人分两种一种懒得打开的还有一种是懒得精致的现在的年轻人好像上班都不太愿意打扮自己了大多数的女生夏天想要快速出门又怕晒黑的基本上都喜欢穿防晒衣  注：引出话题
+我也是今天这是一季防晒衣穿搭大全直接套公式实现你们懒人五分钟精致出门    
+是不是穿着都还不错 往上拉一点是更时髦
+先说第一个啊就是我身上这个娇媚的防晒衣虽然他是防晒衣但是我当时就是冲他这个版型还有时髦度就直接把它当做平时的一个时尚单品去穿搭一个牛仔裤
+或者是鲨鱼裤都可以实现那种上班不露腿穿
+搭特别是我开车的时候就一定会选择这种手套款
+女人买衣服最大的标准是什么 瘦
+这个是插肩款腰这个地方他是有一个双腰线的就会显得你整个人是很薄的
+然后他也可以拉高腰线显腿长大部分的身材都可以穿
+当然防晒衣他更重要的还是防晒力当然我们买的防晒衣 upf 五十加差不多吧其实已经是没有什么紫外线可以透过来了但是这一件会更高 upf 有一百加 upf ，就等于呢它是不仅仅可以防晒伤还可以防晒黑 
+就连他的面罩部分也是同样的防晒力
+这天再热再晒帽子面罩外套袖套全副武装
+就这一件就可以搞定这个料子还蛮舒服的就是那种冰冰凉凉的
+像夏天啊你既要防晒又想要那种俏皮感特别是小个子的女生你就可以像我这样 修身款的防晒衣再搭一个这种小短裙扎一个高高的马尾这一套真的太适合出去约会了
+他这个双向拉链我真觉得蛮好的如果说你们坐着的话啊或者是要那种吼嘿大跳的话你就可以给他拉上来这种特种兵逛街一点问题都没有
+
+
+prechengwenai-boCYrN7FTTbu7hEZVnTmvAp3pGrZqsYimCTUmnBZaipY5nH3G67LqJJs8dCJi
+
+
+下面是一个文案模版，请根据输入的产品信息，融入到文案模版中去，生成一片文案，灵活度高一点，和示例文稿字数相差不大
+首先是一件秋冬天的新外套。我一直都很想要一件保暖然后好看一点的短款的厚外套，最后选了这个气绒服。我其实很少买棕色，但是这个棕它调的有一点奶油感，很高级。A字版型的短款，侧边是有一点点弧度的，这种随便一套都会显得比例很好。特别喜欢它这个大立领，就是你脸往下一埋，时髦又很显脸小。袖子这边是做了一点拼接的，搭配牛仔裤就是比较休闲街头的一套，配短裙就更加活泼一点俏皮一点。冬天已经很辛苦了，我不能接受衣服很臃肿，这个细绒超级热，这在零度以下应该没什么问题，但是可以机洗的，这比起羽绒来说，性价比也比较高一点吧。
+
+
+
+下面是一个文案模版，请根据输入的产品信息，融入到文案模版中去，口语化表述，仿照模版文案的行文逻辑，生成一篇文案
+
+ok 给你们看一下今天的ootd，今天穿了件气容服，是短款的夹克版型，搭个牛仔裤就显得比例很好了，很显高和别的外套不一样，它里面填充的是气容嘛，暖的很快，我现在刚穿上没多久已经感觉到后背开始热了，穿着也更轻。你们看侧面也是包包的，到个冷一点的时候里面多塞一件毛衣也看不出来，而且我最喜欢的点是它弄脏了可以直接丢洗衣机，这件我已经洗过两次了还是很挺阔，因为今天的风就是有点大，然后我就直接这样穿出去了。
+
+
+
+12.5.211151@53018.0.23 0
+
+FZDB 14.2M Query E
+
+Tables(19) 
+Daily_Topics 
+Function_Topics 
+Good_Finds_Topics 
+Personality_Topics 
+Scene_Topics
+Style_Topics 
+
+Product_FabDescription 
+Product_FabricTagline 
+Product_Process 
+Product_SportScenes 
+Product_Tagline 
+Product_UserPainPoints 
+Product_patternTagline 
+Product_Color 
+
+
+brands
+brands_product 
+
+douyin_target_accounts
