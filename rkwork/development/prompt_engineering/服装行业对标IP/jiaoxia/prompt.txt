@@ -157,9 +157,14 @@ Product_Tagline
 Product_UserPainPoints 
 Product_patternTagline 
 Product_Color 
+Product_DesignTagline
+Product_FabricDescription
 
 
 brands
 brands_product 
 
 douyin_target_accounts
+
+
+
