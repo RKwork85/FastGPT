@@ -11,7 +11,7 @@ from sw_package.file_read import data_json, xlsx_to_json
 from sw_package.get_todayTime import todayTime
 
 def chat_request(question_json):
-    question = question_json["文案内容"]
+    question,commasCountStr, substringsStr = split_sentences(question_json["文案内容"])
     client = OpenAI(
        base_url="http://aiagent-pre.chengwen.net/api/v1",  
        api_key="prechengwenai-qYpABXW0b9AkL3ov3eQa5i99SpGwPfXIFtwuhnhVIo9AKKSPFnILwXqG3wJyj1"
@@ -28,7 +28,8 @@ def chat_request(question_json):
     tempt_data["视频编号"] = todayTime() +"-" + question_json["ID"]
     tempt_data["回溯信息"] = pre_config.shooting_schedule + "-" + question_json["模板编号"] + "-" + random_choice(pre_config.video_template) + "-"+ todayTime() +"-" + question_json["ID"]
     tempt_data["视频名称"] = question_json["模板编号"] + "-" + random_choice(pre_config.video_template) + "-"+ todayTime() +"-" + question_json["ID"]
-    tempt_data["视频字幕"], tempt_data["切割数组"] = process_cc_length(question_json["文案内容"])
+    tempt_data["视频字幕"] = substringsStr
+    tempt_data["切割数组"] = commasCountStr
     concat = content_solved(content)
     tempt_data["混剪素材"] = concat
     tempt_data["背景音乐"] = pre_config.bgm_path + "\\" + random_choice(pre_config.bgm_option)
@@ -76,43 +77,54 @@ def random_choice(lst):
         return ""
     return random.choice(lst)
 
-def process_cc_length(text):
-    # 存储每条数据长度处理结果的数组
-    data_list = [item.strip() for item in re.split(r'[，。！？；：“”‘’\.,!?;:"\']+', text) if item.strip()]
-    length_results = []
-    # 存储处理后的新字符串数组
-    new_strings = []
 
-    for data in data_list:
-        # 计算字符长度处理结果
-        length_result = (len(data) // 10) + 1
-        length_results.append(str(length_result))
+def split_sentences(text):
+    # 使用“。”和“！”作为分隔符分割文本
+    sentences = []
+    temp_sentence = ""
+    for char in text:
+        temp_sentence += char
+        if char in "。！":  
+            sentences.append(temp_sentence.strip())
+            temp_sentence = ""  
+    if temp_sentence.strip():  # 如果最后还有未处理的文本且不为空
+        sentences.append(temp_sentence.strip())  # 去除空白字符后添加
 
-        # 根据字符长度进行不同处理
-        if len(data) <= 10:
-            # 字符长度小于等于10，不做处理
-            new_strings.append(data)
-        elif 10 < len(data) < 15:
-            # 字符长度大于10且小于15，截断为两个字符串
-            split_index = (len(data) // 2) + 2
-            new_strings.append(data[:split_index])
-            new_strings.append(data[split_index:])
-        elif 15 <= len(data) < 20:
-            # 字符长度大于等于15且小于20，截断为两个字符串
-            split_index = (len(data) // 2)  +1
-            new_strings.append(data[:split_index])
-            new_strings.append(data[split_index:])
-        else:
-            # 字符长度大于等于20，始终保持截断后的每个子串最小长度为4
-            split_index = 7
-            while len(data) > 0:
-                new_strings.append(data[:split_index])
-                data = data[split_index:]
+    # 调用函数统计标点符号数量和切割子串
+    commasCountList, substringsList = count_commas_plus_one(sentences)
 
-        split_resultStr = "\n".join(new_strings)
-        split_resultList = "\n".join(length_results)
+    # 将结果转换为字符串形式
+    sentencesStr = "\n".join(sentences)
+    commasCountStr = "\n".join(commasCountList)
+    substringsStr = "\n".join(substringsList)
 
-    return split_resultStr, split_resultList
+    return sentencesStr, commasCountStr, substringsStr
+
+
+def count_commas_plus_one(sentences):
+    result = []
+    all_substrings = []
+    # 遍历输入的句子列表
+    for sentence in sentences:
+        # 统计当前句子中逗号、顿号和分号的数量
+        comma_count = sentence.count('，')  # 中文逗号
+        pause_mark_count = sentence.count('、')  # 顿号
+        semicolon_count = sentence.count(';')  # 分号
+        # 将所有标点数量加 1后存入结果列表
+        result.append(str(comma_count + pause_mark_count + semicolon_count + 1))
+        
+        # 替换顿号和分号为逗号，以便统一使用逗号进行切割
+        modified_sentence = sentence.replace('、', '，').replace(';', '，')
+        # 使用逗号进行切割
+        substrings = modified_sentence.split('，')
+        
+        # 使用正则表达式去除每个子串中的标点符号
+        cleaned_substrings = [re.sub(r'[，。；！]', '', sub) for sub in substrings]
+        
+        # 将清理后的子串添加到总列表中
+        all_substrings.extend(cleaned_substrings)
+    
+    return result, all_substrings
 
 
 if __name__ =='__main__':
@@ -123,15 +135,16 @@ if __name__ =='__main__':
 
     
     file_list = []
-    samples =input_data[:20]
+    samples =input_data[:30]
     start = time.time()
 
-    result_file = task_running(input_data)
+    result_file = task_running(samples)
     end = time.time()
     print(f"最终执行时间{end - start}")
     
-    with open("final_result2.json", "w", encoding="utf-8") as f:
+    with open("final_result.json", "w", encoding="utf-8") as f:
         json.dump(result_file, f, indent=4, ensure_ascii=False)
+
 
 
 
