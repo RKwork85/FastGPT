@@ -54,12 +54,13 @@ if __name__ == '__main__':
 
     result_list = []
 
-    samples = tasks[:2]
+    samples = tasks[:]
+    # print(type(tasks))
     start = time.time()
     
 
     with multiprocessing.Pool(processes=20) as pool:
-        results = pool.map_async(chat_request, tasks)
+        results = pool.map_async(chat_request, samples)
         
         for index, result in enumerate(results.get()):
             if result is None:
