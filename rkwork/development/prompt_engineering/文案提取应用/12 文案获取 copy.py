@@ -49,7 +49,7 @@ def chat_request(questionJson):
 if __name__ == '__main__':
     
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    with open('/home/rkwork/rkwork/project/FastGPT/rkwork/development/prompt_engineering/文案提取应用/内衣_search_filtered.json','r', encoding='utf-8') as f:
+    with open('/home/rkwork/rkwork/project/FastGPT/rkwork/development/prompt_engineering/文案提取应用/运动内衣_search.json','r', encoding='utf-8') as f:
         tasks = json.load(f)
 
     result_list = []
@@ -72,7 +72,7 @@ if __name__ == '__main__':
                 print(f'第 {index} 个任务返回了非字典类型的结果：{type(result)}，跳过处理')
     end = time.time()
     print(f"最终执行时间{end - start}")
-    with open('/home/rkwork/rkwork/project/FastGPT/rkwork/development/prompt_engineering/文案提取应用/内衣_search_solved.json', 'w', encoding='utf-8') as f:
+    with open('/home/rkwork/rkwork/project/FastGPT/rkwork/development/prompt_engineering/文案提取应用/运动内衣_search_solved.json', 'w', encoding='utf-8') as f:
         json.dump(result_list, f, ensure_ascii=False, indent=4)
 
 
