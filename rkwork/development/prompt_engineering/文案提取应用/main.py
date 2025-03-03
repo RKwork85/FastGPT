@@ -45,23 +45,24 @@ def chat_request(questionJson):
     
     question = cat_prompt(questionJson['文案內容'])    
 
-    # client = OpenAI(base_url="https://api.deepseek.com", api_key="sk-13870ed83bb741e59db6ca2877726057")
-    # response = client.chat.completions.create(
-    #     model="deepseek-chat",                                            
-    #     messages=[
-    #         {"role": "system", "content": "You are a helpful assistant"},
-    #         {'role': 'user', 'content': f'{question}'}],
-    #     stream= True
-    #     )
-    # data_chunk = ''
-    # for chunk in response:
-    #     if chunk.choices[0].delta.content is not None:
+    client = OpenAI(base_url="https://api.deepseek.com", api_key="sk-13870ed83bb741e59db6ca2877726057")
+    response = client.chat.completions.create(
+        model="deepseek-chat",                                            
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant"},
+            {'role': 'user', 'content': f'{question}'}
+            ],
+        stream= True
+        )
+    data_chunk = ''
+    for chunk in response:
+        if chunk.choices[0].delta.content is not None:
 
-    #         data_chunk += chunk.choices[0].delta.content
+            data_chunk += chunk.choices[0].delta.content
 
-    # result = indexInsert(questionJson, {"生成文案": data_chunk})
-    # print(result)
-    # return result
+    result = indexInsert(questionJson, {"生成文案": data_chunk})
+    print(result)
+    return result
 
 
 
@@ -72,8 +73,8 @@ def chat_request(questionJson):
 if __name__ == '__main__':
     
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    
     result_list = []
-
 
     with open('/home/rkwork/rkwork/project/FastGPT/rkwork/development/prompt_engineering/文案提取应用/运动内衣_filter_low_200_liked.json','r', encoding='utf-8') as f:
         data = json.load(f)

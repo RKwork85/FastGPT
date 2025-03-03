@@ -2,10 +2,10 @@ import pandas as pd
 import json
 
 # JSON 文件路径
-json_file_path = "/home/rkwork/rkwork/project/FastGPT/rkwork/development/prompt_engineering/文案提取应用/运动内衣_filter_low_200_liked.json"
+json_file_path = "/home/rkwork/rkwork/project/FastGPT/rkwork/development/prompt_engineering/文案提取应用/data_result.json"
 
 # 输出的 Excel 文件路径
-output_file_path = "/home/rkwork/rkwork/project/FastGPT/rkwork/development/prompt_engineering/文案提取应用/运动内衣_filter_low_200_liked.xlsx"
+output_file_path = "/home/rkwork/rkwork/project/FastGPT/rkwork/development/prompt_engineering/文案提取应用/视频模版分类.xlsx"
 
 # 读取 JSON 文件
 try:
