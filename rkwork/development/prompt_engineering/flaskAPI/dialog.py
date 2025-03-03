@@ -18,7 +18,7 @@ def indexInsert(rawdata, newdata):
 def chat_request(questionJson):
 
     
-    client = OpenAI(base_url="http://aiagent-pre.chengwen.net/api/v1", api_key="prechengwenai-bdcnlemah5fm6Vsd0qKM2aMogazkZISj30sN0ruo37b14kmabGzWY7rAj7eop6of")
+    client = OpenAI(base_url="/api/v1", api_key="")
     response = client.chat.completions.create(
         model="doubao-pro-128k",                                            
         messages=[
