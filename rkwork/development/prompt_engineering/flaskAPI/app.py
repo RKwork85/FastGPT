@@ -24,7 +24,7 @@ def chat_request(questionJson):
         messages=[
             {'role': 'system', 'content': system_prompt},
             {'role': 'user', 'content': f'{question}'}
-        ]
+        ]   
     )
     completion_cp = completion.model_dump_json()
     data = json.loads(completion_cp)

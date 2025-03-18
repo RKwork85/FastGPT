@@ -75,4 +75,4 @@ for line in response.iter_lines(decode_unicode=True):
 #         print(chunk.choices[0].delta.content, end="")
 
 
-pat_4XTdB1hVaR81KnfbbDGVBdwVKhnkfIbhi0qbg31B1NoNTfMUXx3IYkjfsOax8mFx
+# pat_4XTdB1hVaR81KnfbbDGVBdwVKhnkfIbhi0qbg31B1NoNTfMUXx3IYkjfsOax8mFx

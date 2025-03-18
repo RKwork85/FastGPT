@@ -27,6 +27,7 @@ def chat_request(question):
         completion_cp = completion.model_dump_json()
         data = json.loads(completion_cp)
         content = (data["choices"][0]['message']['content'])
+        print(content)
         try:
             json.loads(content)
             print(content)
